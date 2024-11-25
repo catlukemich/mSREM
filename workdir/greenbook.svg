@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<svg xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:svg="http://www.w3.org/2000/svg" id="svg2" viewBox="0 0 744.09 1052.4" version="1.1">
+  <g id="layer1" stroke-width="1px">
+    <path id="path2830" stroke="#7f7f7f" fill="#e6e6e6" d="m363.92 374.18-274.51 41.46c-53.495-3.42-92.267-71.59-88.567-83.55l267.08-35.68 95.993 77.772z"/>
+    <path id="path2832" stroke="#7f7f7f" fill="#679805" d="m372.86 372.36-1.43 415.72-281.43 48.57c-49.431-13.24-84.126-35.08-86.979-75.49l-4.4754-428.7c6.6138 29.82 51.521 83.29 91.454 82.76l282.86-42.857z"/>
+    <path id="path2834" stroke="#7f7f7f" fill="#448400" d="m-0.72435 332.93 280.71-39.29l2.1429 15.714-11.429-7.8571-270.84 36.397-0.58781-4.9684z"/>
+    <path id="path2836" stroke="#d7be53" fill="none" d="m90 416.65-0.714 420.71"/>
+  </g>
+  <metadata>
+    <rdf:RDF>
+      <cc:Work>
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+        <cc:license rdf:resource="http://creativecommons.org/licenses/publicdomain/"/>
+        <dc:publisher>
+          <cc:Agent rdf:about="http://openclipart.org/">
+            <dc:title>Openclipart</dc:title>
+          </cc:Agent>
+        </dc:publisher>
+        <dc:title>Green Book</dc:title>
+        <dc:date>2010-07-27T20:03:26</dc:date>
+        <dc:description>A thick green book</dc:description>
+        <dc:source>http://openclipart.org/detail/74869/green-book-by-rfc1394b</dc:source>
+        <dc:creator>
+          <cc:Agent>
+            <dc:title>rfc1394b</dc:title>
+          </cc:Agent>
+        </dc:creator>
+        <dc:subject>
+          <rdf:Bag>
+            <rdf:li>binding</rdf:li>
+            <rdf:li>book</rdf:li>
+            <rdf:li>clip art</rdf:li>
+            <rdf:li>clipart</rdf:li>
+            <rdf:li>cover</rdf:li>
+            <rdf:li>education</rdf:li>
+            <rdf:li>header</rdf:li>
+            <rdf:li>knowledge</rdf:li>
+            <rdf:li>layout</rdf:li>
+            <rdf:li>library</rdf:li>
+            <rdf:li>page</rdf:li>
+            <rdf:li>paper</rdf:li>
+            <rdf:li>paragraph</rdf:li>
+            <rdf:li>reading</rdf:li>
+            <rdf:li>school</rdf:li>
+            <rdf:li>text</rdf:li>
+            <rdf:li>word</rdf:li>
+            <rdf:li>words</rdf:li>
+            <rdf:li>writer</rdf:li>
+          </rdf:Bag>
+        </dc:subject>
+      </cc:Work>
+      <cc:License rdf:about="http://creativecommons.org/licenses/publicdomain/">
+        <cc:permits rdf:resource="http://creativecommons.org/ns#Reproduction"/>
+        <cc:permits rdf:resource="http://creativecommons.org/ns#Distribution"/>
+        <cc:permits rdf:resource="http://creativecommons.org/ns#DerivativeWorks"/>
+      </cc:License>
+    </rdf:RDF>
+  </metadata>
+</svg>

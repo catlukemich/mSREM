@@ -1,0 +1,48 @@
+[gd_scene load_steps=7 format=3 uid="uid://buiw13tumwoni"]
+
+[ext_resource type="Texture2D" uid="uid://dt4t30dqcrs5e" path="res://assets/ui/main-menu-bg.png" id="1_mt60c"]
+[ext_resource type="Texture2D" uid="uid://c6cae7exuokkp" path="res://assets/ui/main_menu/MENU Exit.png" id="2_sdboj"]
+[ext_resource type="Script" path="res://AnimatedButton-cd8aa2ec8327bfb3565940d1ace34840bf8bae81/addons/animatedbutton/AnimatedButton.gd" id="3_b5oce"]
+[ext_resource type="Texture2D" uid="uid://ypk3n1udvoqn" path="res://assets/ui/main_menu/MENU Load Game.png" id="3_ti5jm"]
+[ext_resource type="Texture2D" uid="uid://bt62l2aytvc8j" path="res://assets/ui/main_menu/MENU New Game.png" id="4_ajmhq"]
+[ext_resource type="Texture2D" uid="uid://bewyca0p0jp16" path="res://assets/ui/main_menu/MENU Save Game.png" id="5_pyvwe"]
+
+[node name="Node2D" type="Node2D"]
+position = Vector2(300, 600)
+
+[node name="BackgroundImAGE" type="Sprite2D" parent="."]
+texture = ExtResource("1_mt60c")
+metadata/_edit_lock_ = true
+
+[node name="ButtonsContainer" type="FlowContainer" parent="."]
+offset_left = -269.0
+offset_top = -510.0
+offset_right = 265.0
+offset_bottom = 580.0
+theme_override_constants/v_separation = 62
+alignment = 1
+
+[node name="AnimatedButton" type="Button" parent="ButtonsContainer"]
+layout_mode = 2
+icon = ExtResource("4_ajmhq")
+flat = true
+script = ExtResource("3_b5oce")
+duration = 0.307
+scale_intensity = 1.4
+position_value = Vector2(0, 0)
+
+[node name="Button2" type="Button" parent="ButtonsContainer"]
+layout_mode = 2
+icon = ExtResource("5_pyvwe")
+flat = true
+
+[node name="Button3" type="Button" parent="ButtonsContainer"]
+layout_mode = 2
+icon = ExtResource("3_ti5jm")
+flat = true
+
+[node name="Button4" type="Button" parent="ButtonsContainer"]
+layout_mode = 2
+tooltip_text = "Exit game - quit to OS"
+icon = ExtResource("2_sdboj")
+flat = true
