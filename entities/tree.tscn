@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://cact2851pcqtv"]
+
+[ext_resource type="Script" path="res://scripts/tree.gd" id="1_jxnf8"]
+[ext_resource type="Texture2D" uid="uid://cbxbv6wc886bq" path="res://assets/trees/tree-leaf-1.png" id="1_rl334"]
+
+[node name="Tree" type="Sprite2D"]
+y_sort_enabled = true
+position = Vector2(6, 0)
+scale = Vector2(1.47973, 1.47973)
+texture = ExtResource("1_rl334")
+offset = Vector2(0, -82.935)
+script = ExtResource("1_jxnf8")

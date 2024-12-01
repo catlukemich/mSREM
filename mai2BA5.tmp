@@ -1,0 +1,55 @@
+[gd_scene load_steps=8 format=3 uid="uid://buiw13tumwoni"]
+
+[ext_resource type="Texture2D" uid="uid://i3hxmipv2fk1" path="res://assets/ui/main_menu/main-menu-bg.png" id="1_whbgk"]
+[ext_resource type="Theme" uid="uid://d3t24j14ojhyn" path="res://assets/ui/main_menu/main_menu_theme.tres" id="2_4ithk"]
+[ext_resource type="Texture2D" uid="uid://ypk3n1udvoqn" path="res://assets/ui/main_menu/MENU Load Game.png" id="3_ti5jm"]
+[ext_resource type="Script" path="res://scripts/AnimatedButton.gd" id="4_8o7ao"]
+[ext_resource type="Texture2D" uid="uid://bt62l2aytvc8j" path="res://assets/ui/main_menu/MENU New Game.png" id="4_ajmhq"]
+[ext_resource type="Texture2D" uid="uid://bewyca0p0jp16" path="res://assets/ui/main_menu/MENU Save Game.png" id="5_pyvwe"]
+[ext_resource type="PackedScene" uid="uid://y1xa4sdmg6ey" path="res://entities/exit_button.tscn" id="7_5th4l"]
+
+[node name="Node2D" type="Node2D"]
+position = Vector2(300, 600)
+
+[node name="BackgroundImage" type="Sprite2D" parent="."]
+self_modulate = Color(0.513233, 0.513233, 0.513233, 1)
+texture = ExtResource("1_whbgk")
+metadata/_edit_lock_ = true
+
+[node name="ButtonsContainer" type="FlowContainer" parent="."]
+offset_left = -250.0
+offset_top = -500.0
+offset_right = 250.0
+offset_bottom = 600.0
+theme_override_constants/v_separation = 62
+alignment = 1
+
+[node name="NewGameButton" type="Button" parent="ButtonsContainer"]
+layout_mode = 2
+theme = ExtResource("2_4ithk")
+theme_override_constants/outline_size = 0
+icon = ExtResource("4_ajmhq")
+flat = true
+script = ExtResource("4_8o7ao")
+duration = 0.307
+scale_intensity = 1.4
+position_value = Vector2(0, 0)
+
+[node name="SaveGameButton" type="Button" parent="ButtonsContainer"]
+layout_mode = 2
+theme = ExtResource("2_4ithk")
+icon = ExtResource("5_pyvwe")
+flat = true
+script = ExtResource("4_8o7ao")
+scale_intensity = 1.3
+
+[node name="LoadGameButton" type="Button" parent="ButtonsContainer"]
+layout_mode = 2
+theme = ExtResource("2_4ithk")
+icon = ExtResource("3_ti5jm")
+flat = true
+script = ExtResource("4_8o7ao")
+scale_intensity = 1.3
+
+[node name="Control" parent="ButtonsContainer" instance=ExtResource("7_5th4l")]
+layout_mode = 2

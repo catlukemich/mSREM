@@ -1,0 +1,58 @@
+[gd_scene load_steps=10 format=3 uid="uid://buiw13tumwoni"]
+
+[ext_resource type="Script" path="res://scripts/main_menu.gd" id="1_2c1jo"]
+[ext_resource type="Texture2D" uid="uid://i3hxmipv2fk1" path="res://assets/ui/main_menu/main-menu-bg.png" id="1_pmuxi"]
+[ext_resource type="Theme" uid="uid://d3t24j14ojhyn" path="res://assets/ui/main_menu/main_menu_theme.tres" id="2_ac6fy"]
+[ext_resource type="Texture2D" uid="uid://bt62l2aytvc8j" path="res://assets/ui/main_menu/MENU New Game.png" id="3_0vkp1"]
+[ext_resource type="Script" path="res://addons/AnimatedButton-cd8aa2ec8327bfb3565940d1ace34840bf8bae81/addons/animatedbutton/OriginalAnimatedButton.gd" id="4_v5wvg"]
+[ext_resource type="Texture2D" uid="uid://bewyca0p0jp16" path="res://assets/ui/main_menu/MENU Save Game.png" id="5_j61pg"]
+[ext_resource type="Texture2D" uid="uid://ypk3n1udvoqn" path="res://assets/ui/main_menu/MENU Load Game.png" id="6_m04wj"]
+[ext_resource type="PackedScene" uid="uid://y1xa4sdmg6ey" path="res://entities/exit_button.tscn" id="7_v1kg8"]
+[ext_resource type="Script" path="res://scripts/AnimatedQuitButton.gd" id="8_hrfpa"]
+
+[node name="Node2D" type="Node2D"]
+position = Vector2(300, 600)
+script = ExtResource("1_2c1jo")
+
+[node name="BackgroundImage" type="Sprite2D" parent="."]
+self_modulate = Color(0.513233, 0.513233, 0.513233, 1)
+texture = ExtResource("1_pmuxi")
+metadata/_edit_lock_ = true
+
+[node name="ButtonsContainer" type="FlowContainer" parent="."]
+offset_left = -250.0
+offset_top = -500.0
+offset_right = 250.0
+offset_bottom = 600.0
+theme_override_constants/v_separation = 62
+alignment = 1
+
+[node name="NewGameButton" type="Button" parent="ButtonsContainer"]
+layout_mode = 2
+theme = ExtResource("2_ac6fy")
+theme_override_constants/outline_size = 0
+icon = ExtResource("3_0vkp1")
+flat = true
+script = ExtResource("4_v5wvg")
+scale_intensity = 1.3
+
+[node name="SaveGameButton" type="Button" parent="ButtonsContainer"]
+layout_mode = 2
+theme = ExtResource("2_ac6fy")
+icon = ExtResource("5_j61pg")
+flat = true
+script = ExtResource("4_v5wvg")
+
+[node name="LoadGameButton" type="Button" parent="ButtonsContainer"]
+layout_mode = 2
+theme = ExtResource("2_ac6fy")
+icon = ExtResource("6_m04wj")
+flat = true
+script = ExtResource("4_v5wvg")
+
+[node name="Control" parent="ButtonsContainer" instance=ExtResource("7_v1kg8")]
+layout_mode = 2
+script = ExtResource("8_hrfpa")
+scale_intensity = 0.5
+
+[connection signal="pressed" from="ButtonsContainer/NewGameButton" to="." method="go_to_main_screen"]

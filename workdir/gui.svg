@@ -505,8 +505,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.72433228"
-     inkscape:cx="1462.7265"
-     inkscape:cy="488.03568"
+     inkscape:cx="1374.3692"
+     inkscape:cy="751.72682"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      inkscape:document-rotation="0"
@@ -1171,7 +1171,7 @@
        id="image1"
        x="317.5"
        y="-3.5562663e-13"
-       style="opacity:0.30635838;stroke:url(#linearGradient2)" /><g
+       style="opacity:1;stroke:url(#linearGradient2)" /><g
        id="MENU New Game"
        transform="matrix(3.7709437,0,0,3.7709437,167.34125,-1013.1964)"
        inkscape:label="MENU New Game"><path

@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://y1xa4sdmg6ey"]
+
+[ext_resource type="Theme" uid="uid://d3t24j14ojhyn" path="res://assets/ui/main_menu/main_menu_theme.tres" id="1_gj72e"]
+[ext_resource type="Texture2D" uid="uid://c6cae7exuokkp" path="res://assets/ui/main_menu/MENU Exit.png" id="2_45yil"]
+
+[node name="ExitButton" type="Button"]
+offset_right = 289.0
+offset_bottom = 171.0
+scale = Vector2(0.128747, 0.128747)
+tooltip_text = "Exit game - quit to OS"
+theme = ExtResource("1_gj72e")
+icon = ExtResource("2_45yil")
+flat = true
+metadata/_edit_use_anchors_ = true
+
+[node name="Node2D" type="Node2D" parent="."]

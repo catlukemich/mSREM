@@ -11,9 +11,10 @@ config_version=5
 [application]
 
 config/name="mSREM"
-run/main_scene="res://main_menu.tscn"
+run/main_scene="res://scenes/main_screen.tscn"
 config/features=PackedStringArray("4.3", "GL Compatibility")
-config/icon="res://icon.svg"
+boot_splash/bg_color=Color(1, 1, 1, 1)
+config/icon="res://assets/main_building.png"
 
 [display]
 
@@ -30,11 +31,24 @@ enabled=PackedStringArray()
 [file_customization]
 
 folder_colors={
-"res://assets/": "red",
+"res://addons/": "gray",
+"res://assets/": "blue",
+"res://assets/cars/": "teal",
+"res://entities/": "red",
+"res://scenes/": "yellow",
+"res://scripts/": "green",
 "res://workdir/": "gray"
+}
+
+[input]
+
+Mouse={
+"deadzone": 0.5,
+"events": []
 }
 
 [rendering]
 
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
+environment/defaults/default_clear_color=Color(0.146356, 0.480967, 0.0580651, 1)

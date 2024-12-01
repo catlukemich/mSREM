@@ -1,0 +1,4 @@
+[gd_scene format=3 uid="uid://myfyjfsvl0i8"]
+
+[node name="Building" type="Sprite2D"]
+y_sort_enabled = true

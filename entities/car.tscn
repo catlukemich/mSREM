@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://d3msiyam2g4xt"]
+
+[ext_resource type="Script" path="res://scripts/car.gd" id="1_qn62m"]
+[ext_resource type="Texture2D" uid="uid://dpimsfuia6fa1" path="res://assets/cars/rail_block.png" id="1_u5s4p"]
+
+[node name="Car" type="Node2D"]
+script = ExtResource("1_qn62m")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1, -16)
+texture = ExtResource("1_u5s4p")
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
+path_desired_distance = 0.1
+target_desired_distance = 0.1
+path_max_distance = 10.0
+path_postprocessing = 1
+avoidance_enabled = true
+debug_enabled = true
+debug_use_custom = true
+debug_path_custom_color = Color(1, 0, 0, 1)
+
+[connection signal="velocity_computed" from="NavigationAgent2D" to="." method="_on_navigation_agent_2d_velocity_computed"]
