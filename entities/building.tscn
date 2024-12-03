@@ -1,4 +1,9 @@
-[gd_scene format=3 uid="uid://myfyjfsvl0i8"]
+[gd_scene load_steps=2 format=3 uid="uid://myfyjfsvl0i8"]
+
+[ext_resource type="Script" path="res://scripts/building.gd" id="1_mlqyx"]
 
 [node name="Building" type="Sprite2D"]
 y_sort_enabled = true
+script = ExtResource("1_mlqyx")
+
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]

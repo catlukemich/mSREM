@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://cid2vmo6erdow"]
+
+[ext_resource type="Script" path="res://tools/curve_based_polygon.gd" id="1_uoqfk"]
+
+[sub_resource type="Curve2D" id="Curve2D_qs1ir"]
+
+[node name="CurveBasedPolygon" type="Polygon2D"]
+script = ExtResource("1_uoqfk")
+
+[node name="Path2D" type="Path2D" parent="."]
+curve = SubResource("Curve2D_qs1ir")

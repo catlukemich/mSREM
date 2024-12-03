@@ -11,6 +11,7 @@ radius = 893.516
 [node name="Cloud" type="Node2D"]
 z_index = 1
 y_sort_enabled = true
+position = Vector2(2834.32, 1098.44)
 script = ExtResource("2_kvulu")
 cloud_image = ExtResource("2_hmxf8")
 shadow_image = ExtResource("3_521eg")
@@ -18,14 +19,16 @@ shadow_image = ExtResource("3_521eg")
 [node name="Cloud" type="Sprite2D" parent="."]
 y_sort_enabled = true
 position = Vector2(-558, -1285)
-scale = Vector2(2.80487, 2.96635)
+rotation = 1.93788
+scale = Vector2(4, 4)
 texture = ExtResource("2_hmxf8")
 
 [node name="Shadow" type="Sprite2D" parent="."]
 z_index = -1
 y_sort_enabled = true
-position = Vector2(797, 1721)
-scale = Vector2(2.80487, 2.96635)
+position = Vector2(4594.35, 1213.23)
+rotation = 1.77877
+scale = Vector2(4, 4)
 texture = ExtResource("3_521eg")
 
 [node name="Area2D" type="Area2D" parent="."]

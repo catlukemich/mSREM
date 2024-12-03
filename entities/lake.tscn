@@ -1,0 +1,48 @@
+[gd_scene load_steps=8 format=3 uid="uid://dg2hgye6belxm"]
+
+[ext_resource type="Shader" path="res://shaders/lake.gdshader" id="1_dvtp4"]
+
+[sub_resource type="Environment" id="Environment_8o2tb"]
+background_mode = 1
+background_color = Color(0.98026, 0, 0.340364, 1)
+background_energy_multiplier = 0.85
+adjustment_enabled = true
+adjustment_brightness = 0.75
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_pdbjq"]
+shader = ExtResource("1_dvtp4")
+
+[sub_resource type="Curve2D" id="Curve2D_idljk"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 272, 46, -26, -46, 26, 46, 377, 103, 123, -66, -123, 66, 288, 381, 66, 30, -66, -30, 10, 359, -66, 55, 66, -55, -10, 138, -45.3854, 39.7123, 45.3854, -39.7123, 94, 77, 0, 0, 0, 0, 191, 37, 0, 0, 0, 0, 272, 46)
+}
+point_count = 8
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_6rnyx"]
+
+[sub_resource type="Curve" id="Curve_27wox"]
+_data = [Vector2(0.114198, 0.124553), 0.0, 0.0, 0, 0, Vector2(0.549383, 0.550656), 0.0, 0.0, 0, 0, Vector2(0.882716, 0.76758), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_0gke1"]
+curve = SubResource("Curve_27wox")
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="Camera2D"]
+environment = SubResource("Environment_8o2tb")
+
+[node name="Path2D" type="Path2D" parent="."]
+texture_repeat = 2
+material = SubResource("ShaderMaterial_pdbjq")
+position = Vector2(11, 87.707)
+scale = Vector2(1, 0.764676)
+curve = SubResource("Curve2D_idljk")
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+material = SubResource("CanvasItemMaterial_6rnyx")
+color = Color(1, 0.21, 0.21, 1)
+texture = SubResource("CurveTexture_0gke1")
+polygon = PackedVector2Array(84, 442, 111, 389, 148, 351, 197, 331, 267, 328, 297, 343, 342, 365, 310, 430, 213, 472, 117, 487, 86, 468)
