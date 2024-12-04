@@ -7,11 +7,11 @@
 [ext_resource type="Texture2D" uid="uid://ccsclkkqwvodf" path="res://assets/trees/tree-leaf-3.png" id="5_542vd"]
 
 [node name="Tree" type="Sprite2D"]
-modulate = Color(0.80363, 0.984703, 1, 1)
+modulate = Color(0.790073, 0.812126, 1, 1)
 y_sort_enabled = true
 position = Vector2(4, 7)
 scale = Vector2(1.47973, 1.47973)
-skew = 0.0906012
+skew = 0.0585118
 texture = ExtResource("5_542vd")
 offset = Vector2(0, -82.935)
 script = ExtResource("1_jxnf8")

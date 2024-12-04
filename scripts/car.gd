@@ -1,4 +1,5 @@
 @tool
+@icon("res://addons/icons/car.png")
 extends Node2D
 
 @export var car_8_directions_images: Array[Texture]

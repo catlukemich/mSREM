@@ -1,4 +1,4 @@
-[gd_scene load_steps=48 format=4 uid="uid://4jd3gwbf1g6n"]
+[gd_scene load_steps=49 format=4 uid="uid://4jd3gwbf1g6n"]
 
 [ext_resource type="Script" path="res://addons/asset-library-MapCamera2D-4-ab18f257b0d7c094a310113fc808d9838c6e9f01/MapCamera2D.gd" id="1_uayb4"]
 [ext_resource type="Texture2D" uid="uid://5mglioth1nvm" path="res://assets/roads.png" id="1_yanq7"]
@@ -17,7 +17,6 @@
 [ext_resource type="Texture2D" uid="uid://dm4jbvhvks72i" path="res://assets/cars/Car1/blue/car.png0006.png" id="10_fkhjw"]
 [ext_resource type="PackedScene" uid="uid://d3msiyam2g4xt" path="res://entities/car.tscn" id="10_knr3b"]
 [ext_resource type="Texture2D" uid="uid://kr6bai2m43h5" path="res://assets/cars/Car1/blue/car.png0007.png" id="11_7kor6"]
-[ext_resource type="Texture2D" uid="uid://dgpprsj3lubxm" path="res://assets/trees/conifer-tree.png" id="11_maieg"]
 [ext_resource type="Texture2D" uid="uid://cbxbv6wc886bq" path="res://assets/trees/tree-leaf-1.png" id="11_vkhtc"]
 [ext_resource type="PackedScene" uid="uid://myfyjfsvl0i8" path="res://entities/building.tscn" id="11_xegis"]
 [ext_resource type="Texture2D" uid="uid://by18axi4v8sd5" path="res://assets/trees/tree-leaf-2.png" id="12_ceo77"]
@@ -27,7 +26,9 @@
 [ext_resource type="Texture2D" uid="uid://dnpmebwmwn761" path="res://assets/buildings/building-cut-corners.png" id="14_3dul6"]
 [ext_resource type="PackedScene" uid="uid://kjw85us2yn07" path="res://entities/park.tscn" id="15_8gwmk"]
 [ext_resource type="PackedScene" uid="uid://cact2851pcqtv" path="res://entities/tree.tscn" id="16_mom80"]
-[ext_resource type="PackedScene" uid="uid://d0tk67cdobtbe" path="res://entities/crane.tscn" id="28_qovm0"]
+[ext_resource type="Texture2D" uid="uid://ccsclkkqwvodf" path="res://assets/trees/tree-leaf-3.png" id="19_svy0t"]
+[ext_resource type="PackedScene" uid="uid://x1mq37m0tseg" path="res://entities/crane.tscn" id="28_qovm0"]
+[ext_resource type="PackedScene" uid="uid://dg2hgye6belxm" path="res://entities/lake.tscn" id="29_nu36k"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_qodnc"]
 vertices = PackedVector2Array(128, 0, 0, 64, -128, 0, 0, -64)
@@ -227,21 +228,22 @@ position = Vector2(110, 70)
 tile_set = SubResource("TileSet_2kyve")
 
 [node name="Car" parent="Objects Layer" instance=ExtResource("10_knr3b")]
-position = Vector2(441.334, 1869.67)
-rotation = 4.71239
+position = Vector2(-276.454, 1933.23)
+rotation = 3.14159
 car_8_directions_images = Array[Texture]([ExtResource("5_qd24i"), ExtResource("6_72p2k"), ExtResource("7_w8r7k"), ExtResource("8_f3us4"), ExtResource("9_p4px1"), ExtResource("10_fkhjw"), ExtResource("11_7kor6"), ExtResource("12_wl8pt")])
 
 [node name="Clouds" type="Node2D" parent="Objects Layer"]
 z_as_relative = false
 y_sort_enabled = true
-position = Vector2(3812.5, -340)
+position = Vector2(3082.5, -870)
+metadata/_edit_group_ = true
 
 [node name="Cloud3" parent="Objects Layer/Clouds" instance=ExtResource("5_0v4t5")]
-position = Vector2(-3395.88, 3042.68)
+position = Vector2(2933.68, 1136.69)
 cloud_speed = 177.94
 
 [node name="Cloud1" parent="Objects Layer/Clouds" instance=ExtResource("5_0v4t5")]
-position = Vector2(1549.16, 1320.64)
+position = Vector2(-5546.23, 5334.25)
 cloud_image = ExtResource("5_xagrw")
 shadow_image = ExtResource("6_6o5rc")
 initial_rotation_degrees = 411
@@ -249,18 +251,18 @@ scale_variance = 0.7
 cloud_speed = 180.635
 
 [node name="Cloud2" parent="Objects Layer/Clouds" instance=ExtResource("5_0v4t5")]
-position = Vector2(-1715.53, 4000.46)
+position = Vector2(-1627.28, 4732.24)
 cloud_speed = 184.645
 
 [node name="Cloud5" parent="Objects Layer/Clouds" instance=ExtResource("5_0v4t5")]
-position = Vector2(-502.742, 837.762)
+position = Vector2(-6862.48, 7119.86)
 cloud_speed = 175.44
 
 [node name="Cloud6" parent="Objects Layer/Clouds" instance=ExtResource("5_0v4t5")]
-position = Vector2(-7074.06, 7484.71)
+position = Vector2(-1541.67, 2395.73)
 
 [node name="Cloud4" parent="Objects Layer/Clouds" instance=ExtResource("5_0v4t5")]
-position = Vector2(-1125, 3595.04)
+position = Vector2(-3121.45, -1230.23)
 cloud_image = ExtResource("7_dmxy8")
 shadow_image = ExtResource("6_e32yx")
 cloud_speed = 191.095
@@ -269,67 +271,69 @@ cloud_speed = 191.095
 y_sort_enabled = true
 
 [node name="Tree" parent="Objects Layer/Trees" instance=ExtResource("16_mom80")]
-modulate = Color(0.973523, 0.813746, 1, 1)
+modulate = Color(0.748314, 0.934054, 1, 1)
 position = Vector2(-392.5, 20)
-skew = 0.0563647
-texture = ExtResource("12_ceo77")
+skew = 0.000652288
+texture = ExtResource("19_svy0t")
 
 [node name="Tree2" parent="Objects Layer/Trees" instance=ExtResource("16_mom80")]
-modulate = Color(0.989757, 0.753789, 1, 1)
+modulate = Color(0.806952, 0.960444, 1, 1)
 position = Vector2(-555, -67.5)
-skew = 0.0593029
+skew = 0.00706276
 
 [node name="Tree3" parent="Objects Layer/Trees" instance=ExtResource("16_mom80")]
-modulate = Color(0.841064, 0.871705, 1, 1)
+modulate = Color(0.967872, 0.830456, 1, 1)
 position = Vector2(-875, 162.5)
-skew = 0.090353
+skew = 0.0174188
+texture = ExtResource("11_vkhtc")
 
 [node name="Tree4" parent="Objects Layer/Trees" instance=ExtResource("16_mom80")]
-modulate = Color(0.919522, 0.732981, 1, 1)
+modulate = Color(0.707146, 0.964655, 1, 1)
 position = Vector2(-495, 380)
-skew = 0.0963804
+skew = 0.00565735
 texture = ExtResource("11_vkhtc")
 
 [node name="Tree5" parent="Objects Layer/Trees" instance=ExtResource("16_mom80")]
-modulate = Color(0.81425, 0.996054, 1, 1)
+modulate = Color(0.932366, 0.848051, 1, 1)
 position = Vector2(-302.5, 402.5)
-skew = 0.0975195
-texture = ExtResource("11_maieg")
+skew = 0.00951613
+texture = ExtResource("19_svy0t")
 
 [node name="Tree6" parent="Objects Layer/Trees" instance=ExtResource("16_mom80")]
-modulate = Color(0.821533, 0.87563, 1, 1)
+modulate = Color(0.927525, 0.949222, 1, 1)
 position = Vector2(262.5, 372.5)
-skew = 0.0931253
-texture = ExtResource("11_maieg")
+skew = 0.00556144
+texture = ExtResource("19_svy0t")
 
 [node name="Tree7" parent="Objects Layer/Trees" instance=ExtResource("16_mom80")]
-modulate = Color(0.872466, 0.974101, 1, 1)
+modulate = Color(0.748719, 0.740381, 1, 1)
 position = Vector2(670, 225)
-skew = 0.098409
-texture = ExtResource("11_maieg")
+skew = 0.00643542
+texture = ExtResource("19_svy0t")
 
 [node name="Tree8" parent="Objects Layer/Trees" instance=ExtResource("16_mom80")]
-modulate = Color(0.767977, 0.98321, 1, 1)
+modulate = Color(0.842421, 0.978607, 1, 1)
 position = Vector2(920, 70)
-skew = 0.0665415
-texture = ExtResource("11_maieg")
+skew = 0.00477975
+texture = ExtResource("12_ceo77")
 
 [node name="Tree9" parent="Objects Layer/Trees" instance=ExtResource("16_mom80")]
-modulate = Color(0.777353, 0.803541, 1, 1)
+modulate = Color(0.81413, 0.800864, 1, 1)
 position = Vector2(1105, 160)
-skew = 0.0747721
+skew = 0.00181636
+texture = ExtResource("12_ceo77")
 
 [node name="Tree10" parent="Objects Layer/Trees" instance=ExtResource("16_mom80")]
-modulate = Color(0.788475, 0.848704, 1, 1)
+modulate = Color(0.829745, 0.84548, 1, 1)
 position = Vector2(1267.5, 247.5)
-skew = 0.0871901
-texture = ExtResource("11_maieg")
+skew = 0.00765314
+texture = ExtResource("11_vkhtc")
 
 [node name="Tree11" parent="Objects Layer/Trees" instance=ExtResource("16_mom80")]
-modulate = Color(0.803626, 0.977484, 1, 1)
+modulate = Color(0.80276, 0.713511, 1, 1)
 position = Vector2(1312.5, 165)
-skew = 0.0923595
-texture = ExtResource("12_ceo77")
+skew = 0.00838166
+texture = ExtResource("11_vkhtc")
 
 [node name="Buildings" type="Node2D" parent="Objects Layer"]
 y_sort_enabled = true
@@ -376,29 +380,17 @@ offset = Vector2(0, -800)
 [node name="Park" parent="Objects Layer/Buildings" instance=ExtResource("15_8gwmk")]
 position = Vector2(55, 25)
 scale = Vector2(2.01622, 2.01622)
-skew = 0.0128784
+skew = 0.00716259
 
-[node name="Crane" type="Node2D" parent="Objects Layer"]
-position = Vector2(1257.5, 3405)
+[node name="Lake" parent="Objects Layer/Buildings" instance=ExtResource("29_nu36k")]
+y_sort_enabled = false
+position = Vector2(95, -3222.5)
+scale = Vector2(9.8215, 9.8215)
+tile_scale = 16.3
+water_color_1 = Color(0, 0.474147, 0.696166, 1)
 
-[node name="SubViewportContainer" type="SubViewportContainer" parent="Objects Layer/Crane"]
-z_as_relative = false
-y_sort_enabled = true
-offset_left = -1290.0
-offset_top = -2340.0
-offset_right = 1342.0
-offset_bottom = 292.0
-stretch = true
-
-[node name="SubViewport" type="SubViewport" parent="Objects Layer/Crane/SubViewportContainer"]
-transparent_bg = true
-handle_input_locally = false
-msaa_2d = 3
-msaa_3d = 3
-screen_space_aa = 1
-use_taa = true
-size = Vector2i(2632, 2632)
-render_target_update_mode = 4
-
-[node name="crane2" parent="Objects Layer/Crane/SubViewportContainer/SubViewport" instance=ExtResource("28_qovm0")]
-global_speed_coefficient = 0.2
+[node name="Crane" parent="Objects Layer/Buildings" instance=ExtResource("28_qovm0")]
+y_sort_enabled = false
+position = Vector2(1317.5, 3407.5)
+enabled = true
+global_speed_coefficient = -0.03

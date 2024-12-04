@@ -1,4 +1,6 @@
 @tool
+@icon("res://addons/icons/cloud.png")
+class_name Cloud
 extends Node2D
 
 #@export var cloud_image: Texture
