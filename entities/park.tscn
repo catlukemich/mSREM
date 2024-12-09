@@ -1,9 +1,68 @@
-[gd_scene load_steps=3 format=3 uid="uid://kjw85us2yn07"]
+[gd_scene load_steps=6 format=3 uid="uid://kjw85us2yn07"]
 
-[ext_resource type="Texture2D" uid="uid://b6hfdmwi0arbf" path="res://assets/park.png" id="1_2sa36"]
+[ext_resource type="Texture2D" uid="uid://b6hfdmwi0arbf" path="res://assets/buildings/park.png" id="1_2sa36"]
 [ext_resource type="Script" path="res://scripts/park.gd" id="2_8lcoh"]
+[ext_resource type="PackedScene" uid="uid://cact2851pcqtv" path="res://entities/tree.tscn" id="3_67tnx"]
+[ext_resource type="Texture2D" uid="uid://dgpprsj3lubxm" path="res://assets/trees/conifer-tree.png" id="4_qotfp"]
+[ext_resource type="Texture2D" uid="uid://cbxbv6wc886bq" path="res://assets/trees/tree-leaf-1.png" id="5_riudl"]
 
 [node name="Park" type="Sprite2D"]
+y_sort_enabled = true
 texture = ExtResource("1_2sa36")
-offset = Vector2(-19.365, -47.945)
+offset = Vector2(38, 20)
 script = ExtResource("2_8lcoh")
+
+[node name="Tree" parent="." instance=ExtResource("3_67tnx")]
+modulate = Color(0.734206, 0.880302, 1, 1)
+z_index = 1
+position = Vector2(-163, 24)
+scale = Vector2(0.889034, 0.889034)
+skew = 0.0297363
+texture = ExtResource("4_qotfp")
+
+[node name="Tree2" parent="." instance=ExtResource("3_67tnx")]
+modulate = Color(0.776354, 0.76551, 1, 1)
+z_index = 1
+position = Vector2(-15, 108)
+scale = Vector2(0.889034, 0.889034)
+skew = 0.073706
+texture = ExtResource("4_qotfp")
+
+[node name="Tree3" parent="." instance=ExtResource("3_67tnx")]
+modulate = Color(0.745805, 0.838824, 1, 1)
+z_index = 1
+position = Vector2(142, 31)
+scale = Vector2(0.889034, 0.889034)
+skew = 0.0471612
+
+[node name="Tree4" parent="." instance=ExtResource("3_67tnx")]
+modulate = Color(0.881518, 0.787913, 1, 1)
+z_index = 1
+position = Vector2(161, -20)
+scale = Vector2(0.889034, 0.889034)
+skew = 0.0219518
+texture = ExtResource("5_riudl")
+
+[node name="Tree6" parent="." instance=ExtResource("3_67tnx")]
+modulate = Color(0.90824, 0.788742, 1, 1)
+z_index = 1
+position = Vector2(-39, -58)
+scale = Vector2(0.889034, 0.889034)
+skew = 0.0230309
+texture = ExtResource("5_riudl")
+
+[node name="Tree7" parent="." instance=ExtResource("3_67tnx")]
+modulate = Color(0.919963, 0.945445, 1, 1)
+z_index = 1
+position = Vector2(44, 83)
+scale = Vector2(0.889034, 0.889034)
+skew = 0.0842365
+texture = ExtResource("5_riudl")
+
+[node name="Tree5" parent="." instance=ExtResource("3_67tnx")]
+modulate = Color(0.733812, 0.881161, 1, 1)
+z_index = 1
+position = Vector2(27, -65)
+scale = Vector2(0.889034, 0.889034)
+skew = 0.0530131
+texture = ExtResource("5_riudl")

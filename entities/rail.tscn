@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://mu6t46neu7ly"]
+
+[ext_resource type="Script" path="res://scripts/rail.gd" id="1_gf46l"]
+
+[node name="Rail" type="Node2D"]
+y_sort_enabled = true
+position = Vector2(-2, 1)
+script = ExtResource("1_gf46l")

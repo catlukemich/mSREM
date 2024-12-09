@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://dlkghgnxtjhg8"]
+
+[ext_resource type="Script" path="res://scripts/parking_lot_south.gd" id="1_h0jm0"]
+[ext_resource type="Texture2D" uid="uid://twx2twcnlxbe" path="res://assets/buildings/parking-lot-small.png" id="1_u4n1y"]
+
+[node name="ParkingLotSouth" type="Node2D"]
+y_sort_enabled = true
+script = ExtResource("1_h0jm0")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_u4n1y")

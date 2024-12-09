@@ -25,7 +25,6 @@ func _process(delta: float) -> void:
 	if Engine.is_editor_hint():
 		agent.target_position = get_global_mouse_position()
 		if agent.is_navigation_finished(): 
-			print("finished!")
 			return
 	var current_position = global_position
 	var next = agent.get_next_path_position()
@@ -50,7 +49,6 @@ func _process(delta: float) -> void:
 	corrected_to_vector.y *= 2 # Due to isometric grid problems
 	
 	if agent.is_navigation_finished(): 
-		print("finished!")
 		return
 	for index in range(0,8):
 		var cur_dir_vec = the_8_dir_vectors[index].normalized()

@@ -1,0 +1,41 @@
+[gd_scene load_steps=18 format=3 uid="uid://cldf2vkuk7sme"]
+
+[ext_resource type="Script" path="res://scripts/train.gd" id="1_pvoek"]
+[ext_resource type="Texture2D" uid="uid://ctjewxvingxk8" path="res://assets/train/front0001.png" id="2_73p6c"]
+[ext_resource type="Texture2D" uid="uid://r0empwa6j56t" path="res://assets/train/front0002.png" id="3_meil5"]
+[ext_resource type="Texture2D" uid="uid://b2qetwuf2adv4" path="res://assets/train/front0003.png" id="4_0l6ob"]
+[ext_resource type="Texture2D" uid="uid://b7vrekpkm50hx" path="res://assets/train/front0004.png" id="5_51dks"]
+[ext_resource type="Texture2D" uid="uid://dybcefpvwpfcv" path="res://assets/train/front0005.png" id="6_23xxx"]
+[ext_resource type="Texture2D" uid="uid://dw42ybnfkvbb7" path="res://assets/train/front0006.png" id="7_qlwbi"]
+[ext_resource type="Texture2D" uid="uid://eip2j03bmb67" path="res://assets/train/front0007.png" id="8_i3pue"]
+[ext_resource type="Texture2D" uid="uid://byw6mmat7tbp4" path="res://assets/train/front0008.png" id="9_tj0pg"]
+[ext_resource type="Texture2D" uid="uid://bvbk88cfq8n3i" path="res://assets/train/front0009.png" id="10_of3rh"]
+[ext_resource type="Texture2D" uid="uid://b1ea7oujhml2k" path="res://assets/train/front0010.png" id="11_opo61"]
+[ext_resource type="Texture2D" uid="uid://bp8fr2cw2d2tn" path="res://assets/train/front0011.png" id="12_3o3re"]
+[ext_resource type="Texture2D" uid="uid://df2edwasdqmoh" path="res://assets/train/front0012.png" id="13_qycsj"]
+[ext_resource type="Texture2D" uid="uid://cv0uuf0d7yuoo" path="res://assets/train/front0013.png" id="14_umuqy"]
+[ext_resource type="Texture2D" uid="uid://ih7h2tuxl82k" path="res://assets/train/front0014.png" id="15_ionrl"]
+[ext_resource type="Texture2D" uid="uid://dsjos3bff6tod" path="res://assets/train/front0015.png" id="16_18s43"]
+[ext_resource type="Texture2D" uid="uid://dorun5cd8miw6" path="res://assets/train/front0016.png" id="17_gadax"]
+
+[node name="Train" type="Node2D"]
+script = ExtResource("1_pvoek")
+train_16_directions_images = Array[Texture]([ExtResource("2_73p6c"), ExtResource("3_meil5"), ExtResource("4_0l6ob"), ExtResource("5_51dks"), ExtResource("6_23xxx"), ExtResource("7_qlwbi"), ExtResource("8_i3pue"), ExtResource("9_tj0pg"), ExtResource("10_of3rh"), ExtResource("11_opo61"), ExtResource("12_3o3re"), ExtResource("13_qycsj"), ExtResource("14_umuqy"), ExtResource("15_ionrl"), ExtResource("16_18s43"), ExtResource("17_gadax")])
+btn_reset = null
+
+[node name="FrontSprite" type="Sprite2D" parent="."]
+position = Vector2(18, 14)
+scale = Vector2(0.539063, 0.539063)
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
+target_position = Vector2(-318.762, 697.177)
+path_desired_distance = 6.0
+target_desired_distance = 0.1
+path_max_distance = 50.0
+path_postprocessing = 1
+path_metadata_flags = 0
+debug_enabled = true
+debug_use_custom = true
+debug_path_custom_color = Color(1, 0, 0, 1)
+
+[connection signal="velocity_computed" from="NavigationAgent2D" to="." method="_on_navigation_agent_2d_velocity_computed"]

@@ -1,4 +1,5 @@
 @tool
+@icon("res://addons/icons/park.svg")
 extends Sprite2D
 
 var skew_dir = 1
@@ -11,9 +12,9 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	skew += skew_dir * delta * 0.040
-	if skew > 0.04:
-		skew_dir = -1
-	if skew < 0:
-		skew_dir = 1
+	#skew += skew_dir * delta * 0.040
+	#if skew > 0.04:
+		#skew_dir = -1
+	#if skew < 0:
+		#skew_dir = 1
 	pass

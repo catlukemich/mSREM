@@ -1,5 +1,6 @@
 @tool
 @icon("res://addons/icons/tree.png")
+class_name GameTree
 extends Sprite2D
 
 var skew_dir = 1

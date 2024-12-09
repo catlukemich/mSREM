@@ -14,7 +14,6 @@ config/name="mSREM"
 run/main_scene="res://scenes/main_screen.tscn"
 config/features=PackedStringArray("4.3", "GL Compatibility")
 boot_splash/bg_color=Color(1, 1, 1, 1)
-config/icon="res://assets/main_building.png"
 
 [autoload]
 
@@ -60,6 +59,10 @@ Press={
 
 2d/default_edge_connection_margin=4.0
 2d/default_link_connection_radius=50.0
+
+[orchestrator]
+
+settings/action_favorites=PackedStringArray("Types/Float/Operators/Float_Multiply_Float")
 
 [rendering]
 

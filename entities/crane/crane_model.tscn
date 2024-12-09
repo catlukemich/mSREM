@@ -799,10 +799,10 @@ mesh = SubResource("ArrayMesh_0yndm")
 skeleton = NodePath("")
 
 [node name="Scaffold" type="Node3D" parent="Stand"]
-transform = Transform3D(0.993793, 0, -0.111242, 0, 1, 0, 0.111242, 0, 0.993793, 0.0165907, 0, 0.0239482)
+transform = Transform3D(0.965484, 0, 0.260461, 0, 1, 0, -0.260461, 0, 0.965484, 0.0165907, 0, 0.0239482)
 
 [node name="HookCompound" type="Node3D" parent="Stand/Scaffold"]
-transform = Transform3D(1, 0, -1.42109e-14, 0, 1, 0, 1.42109e-14, 0, 1, 5.65128, 0, 0)
+transform = Transform3D(1, 0, -1.42109e-14, 0, 1, 0, 1.42109e-14, 0, 1, 2.01042, 0, 0)
 
 [node name="Hook" type="MeshInstance3D" parent="Stand/Scaffold/HookCompound"]
 transform = Transform3D(0.62672, 0, 7.45058e-09, 0, 0.62672, 0, -7.45058e-09, 0, 0.62672, -14.8948, 17.316, 0.00743902)

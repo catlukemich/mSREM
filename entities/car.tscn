@@ -21,7 +21,7 @@ scale = Vector2(0.539063, 0.539063)
 texture = ExtResource("2_htnt3")
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
-target_position = Vector2(-4397.95, -2483.93)
+target_position = Vector2(-97.006, 63.5683)
 path_desired_distance = 6.0
 target_desired_distance = 0.1
 path_max_distance = 50.0
