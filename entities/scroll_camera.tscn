@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://cto3quvnnes0t"]
+
+[ext_resource type="Script" path="res://addons/asset-library-MapCamera2D-4-ab18f257b0d7c094a310113fc808d9838c6e9f01/MapCamera2D.gd" id="1_22u0l"]
+
+[node name="Camera2D" type="Camera2D"]
+position = Vector2(-45.0001, -5)
+limit_left = -1000
+limit_top = -1000
+limit_right = 1000
+limit_bottom = 3000
+limit_smoothed = true
+script = ExtResource("1_22u0l")
+zoom_factor = 2.0
+zoom_min = 0.5
+zoom_max = 4.0
+drag_inertia = 0.312
+metadata/_edit_lock_ = true

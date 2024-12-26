@@ -1,5 +1,5 @@
 @tool
-@icon("res://addons/icons/crane.png")
+@icon("res://icons/crane.png")
 extends Node2D
 
 @export var enabled : bool = true

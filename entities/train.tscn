@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://cldf2vkuk7sme"]
+[gd_scene load_steps=34 format=3 uid="uid://cldf2vkuk7sme"]
 
 [ext_resource type="Script" path="res://scripts/train.gd" id="1_pvoek"]
 [ext_resource type="Texture2D" uid="uid://ctjewxvingxk8" path="res://assets/train/front0001.png" id="2_73p6c"]
@@ -17,25 +17,31 @@
 [ext_resource type="Texture2D" uid="uid://ih7h2tuxl82k" path="res://assets/train/front0014.png" id="15_ionrl"]
 [ext_resource type="Texture2D" uid="uid://dsjos3bff6tod" path="res://assets/train/front0015.png" id="16_18s43"]
 [ext_resource type="Texture2D" uid="uid://dorun5cd8miw6" path="res://assets/train/front0016.png" id="17_gadax"]
+[ext_resource type="Texture2D" uid="uid://f8n1x8jdi20d" path="res://assets/train/wagon0001.png" id="18_uwse1"]
+[ext_resource type="Texture2D" uid="uid://cvi8osrei17gl" path="res://assets/train/wagon0002.png" id="19_ibsqb"]
+[ext_resource type="Texture2D" uid="uid://btvyaphu60gph" path="res://assets/train/wagon0003.png" id="20_6o1dn"]
+[ext_resource type="Texture2D" uid="uid://33ucjw20fpxl" path="res://assets/train/wagon0004.png" id="21_b5255"]
+[ext_resource type="Texture2D" uid="uid://cnxtvk1rfds63" path="res://assets/train/wagon0005.png" id="22_fqgim"]
+[ext_resource type="Texture2D" uid="uid://l58pcrnhqlvj" path="res://assets/train/wagon0006.png" id="23_yc416"]
+[ext_resource type="Texture2D" uid="uid://bg30w02usgcod" path="res://assets/train/wagon0007.png" id="24_bnwwd"]
+[ext_resource type="Texture2D" uid="uid://bh1bvhox6rxwg" path="res://assets/train/wagon0008.png" id="25_0w5sb"]
+[ext_resource type="Texture2D" uid="uid://b5ualwgpmwo7y" path="res://assets/train/wagon0009.png" id="26_r8vum"]
+[ext_resource type="Texture2D" uid="uid://7sbh6p07x57c" path="res://assets/train/wagon0010.png" id="27_gsjwi"]
+[ext_resource type="Texture2D" uid="uid://cm60tpc70ed8k" path="res://assets/train/wagon0011.png" id="28_oqgls"]
+[ext_resource type="Texture2D" uid="uid://be7n761h5p05v" path="res://assets/train/wagon0012.png" id="29_gnatg"]
+[ext_resource type="Texture2D" uid="uid://dihaybykmbmvp" path="res://assets/train/wagon0013.png" id="30_nak5n"]
+[ext_resource type="Texture2D" uid="uid://cp32iq1ydgb6j" path="res://assets/train/wagon0014.png" id="31_qwxmn"]
+[ext_resource type="Texture2D" uid="uid://bf5kud81f2gt5" path="res://assets/train/wagon0015.png" id="32_wedmm"]
+[ext_resource type="Texture2D" uid="uid://dtwxc6q8j0ec5" path="res://assets/train/wagon0016.png" id="33_05cle"]
 
 [node name="Train" type="Node2D"]
+y_sort_enabled = true
 script = ExtResource("1_pvoek")
 train_16_directions_images = Array[Texture]([ExtResource("2_73p6c"), ExtResource("3_meil5"), ExtResource("4_0l6ob"), ExtResource("5_51dks"), ExtResource("6_23xxx"), ExtResource("7_qlwbi"), ExtResource("8_i3pue"), ExtResource("9_tj0pg"), ExtResource("10_of3rh"), ExtResource("11_opo61"), ExtResource("12_3o3re"), ExtResource("13_qycsj"), ExtResource("14_umuqy"), ExtResource("15_ionrl"), ExtResource("16_18s43"), ExtResource("17_gadax")])
-btn_reset = null
+wagon_16_directions_images = Array[Texture]([ExtResource("18_uwse1"), ExtResource("19_ibsqb"), ExtResource("20_6o1dn"), ExtResource("21_b5255"), ExtResource("22_fqgim"), ExtResource("23_yc416"), ExtResource("24_bnwwd"), ExtResource("25_0w5sb"), ExtResource("26_r8vum"), ExtResource("27_gsjwi"), ExtResource("28_oqgls"), ExtResource("29_gnatg"), ExtResource("30_nak5n"), ExtResource("31_qwxmn"), ExtResource("32_wedmm"), ExtResource("33_05cle")])
 
 [node name="FrontSprite" type="Sprite2D" parent="."]
-position = Vector2(18, 14)
-scale = Vector2(0.539063, 0.539063)
-
-[node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
-target_position = Vector2(-318.762, 697.177)
-path_desired_distance = 6.0
-target_desired_distance = 0.1
-path_max_distance = 50.0
-path_postprocessing = 1
-path_metadata_flags = 0
-debug_enabled = true
-debug_use_custom = true
-debug_path_custom_color = Color(1, 0, 0, 1)
-
-[connection signal="velocity_computed" from="NavigationAgent2D" to="." method="_on_navigation_agent_2d_velocity_computed"]
+y_sort_enabled = true
+position = Vector2(0, 175)
+scale = Vector2(0.4, 0.4)
+offset = Vector2(0, -400)

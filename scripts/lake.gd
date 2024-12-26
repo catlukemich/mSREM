@@ -1,6 +1,6 @@
 @tool
 
-@icon("res://addons/icons/water.svg")
+@icon("res://icons/water.png")
 extends Node2D
 class_name Lake2D
 

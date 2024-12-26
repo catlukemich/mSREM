@@ -1,6 +1,6 @@
 [gd_scene load_steps=53 format=4 uid="uid://d4hbpdkhcsuyy"]
 
-[ext_resource type="Script" path="res://scripts/crane_movement.gd" id="1_crsl6"]
+[ext_resource type="Script" path="res://scripts/crane_movement.gd" id="1_27brg"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3li1w"]
 resource_name = "Material.004"
@@ -791,7 +791,7 @@ ambient_light_energy = 4.7
 
 [node name="CraneModel" type="Node3D"]
 transform = Transform3D(-1, 0, 1.50996e-07, 0, 1, 0, -1.50996e-07, 0, -1, 0, 0, 0)
-script = ExtResource("1_crsl6")
+script = ExtResource("1_27brg")
 
 [node name="Stand" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.09799, 0, 0.921429)
@@ -799,10 +799,10 @@ mesh = SubResource("ArrayMesh_0yndm")
 skeleton = NodePath("")
 
 [node name="Scaffold" type="Node3D" parent="Stand"]
-transform = Transform3D(0.965484, 0, 0.260461, 0, 1, 0, -0.260461, 0, 0.965484, 0.0165907, 0, 0.0239482)
+transform = Transform3D(0.971354, 0, 0.237637, 0, 1, 0, -0.237637, 0, 0.971354, 0.0165907, 0, 0.0239482)
 
 [node name="HookCompound" type="Node3D" parent="Stand/Scaffold"]
-transform = Transform3D(1, 0, -1.42109e-14, 0, 1, 0, 1.42109e-14, 0, 1, 2.01042, 0, 0)
+transform = Transform3D(1, 0, -1.42109e-14, 0, 1, 0, 1.42109e-14, 0, 1, 2.7203, 0, 0)
 
 [node name="Hook" type="MeshInstance3D" parent="Stand/Scaffold/HookCompound"]
 transform = Transform3D(0.62672, 0, 7.45058e-09, 0, 0.62672, 0, -7.45058e-09, 0, 0.62672, -14.8948, 17.316, 0.00743902)

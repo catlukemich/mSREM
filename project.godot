@@ -18,18 +18,19 @@ boot_splash/bg_color=Color(1, 1, 1, 1)
 [autoload]
 
 Cursor="*res://addons/awesome_custom_cursor/Autoloads/Cursor.tscn"
+Globals="*res://scripts/globals.gd"
 
 [display]
 
-window/size/viewport_width=600
-window/size/viewport_height=1200
-window/size/window_width_override=300
-window/size/window_height_override=600
+window/size/viewport_width=1920
+window/size/viewport_height=1280
+window/size/window_width_override=1280
+window/size/window_height_override=853
 window/stretch/mode="viewport"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/awesome_custom_cursor/plugin.cfg", "res://addons/collapse_folders/plugin.cfg", "res://addons/godot_test_scene/plugin.cfg", "res://addons/merovi.svgtexture2d/plugin.cfg", "res://addons/simple_tool_button/plugin.cfg")
+enabled=PackedStringArray("res://addons/FancyControls/plugin.cfg", "res://addons/awesome_custom_cursor/plugin.cfg", "res://addons/collapse_folders/plugin.cfg", "res://addons/godot_test_scene/plugin.cfg", "res://addons/merovi.svgtexture2d/plugin.cfg", "res://addons/simple_tool_button/plugin.cfg")
 
 [file_customization]
 
@@ -42,6 +43,10 @@ folder_colors={
 "res://scripts/": "green",
 "res://workdir/": "gray"
 }
+
+[global_group]
+
+TrafficLightsGroup=""
 
 [input]
 

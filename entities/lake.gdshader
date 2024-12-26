@@ -110,8 +110,8 @@ float waterlayer(vec2 uv)
 vec3 water(vec2 uv, vec3 cdir, float iTime)
 {
     uv *= vec2(0.25);
-	
-	
+
+
 
     // Parallax height distortion with two directional waves at
     // slightly different angles.
@@ -120,7 +120,7 @@ vec3 water(vec2 uv, vec3 cdir, float iTime)
     uv += a * h;
     h = sin(0.841471 * uv.x - 0.540302 * uv.y + iTime);
     uv += a * h;
-    
+
     // Texture distortion
     float d1 = mod(uv.x + uv.y, TWOPI);
     float d2 = mod((uv.x + uv.y + 0.25) * 1.3, SIXPI);
@@ -130,16 +130,16 @@ vec3 water(vec2 uv, vec3 cdir, float iTime)
     	sin(d1) * 0.15 + sin(d2) * 0.05,
     	cos(d1) * 0.15 + cos(d2) * 0.05
     );
-    
+
     vec3 ret = mix(WATER_COL.rgb, WATER2_COL.rgb, waterlayer(uv + dist.xy));
     ret = mix(ret.rgb, FOAM_COL.rgb, waterlayer(vec2(1.0) - uv - dist.yx));
-	
+
     return ret;
 }
 
 void vertex(){
-	
-	
+
+
 	//globalposition = (MODEL_MATRIX * vec4(VERTEX, 0.0, 1.0)).xy;
 	//globalposition.x = globalposition.x % 1.0;
 	//globalposition.y = globalposition.y % 1.0;
@@ -150,17 +150,17 @@ void fragment() {
 	float distortion_y = texture(TEXTURE, UV.xy *  tile_scale + 1348654.0).x;
 	float distortion_magnitude = 2.0;
 	vec2 distortion = vec2(distortion_x, distortion_y) * distortion_magnitude;
-	
+
 	COLOR.rgb = water(
-		UV * tile * tile_scale * 10.0 + offset + distortion + wind_dir * wind_speed * TIME, 
-		vec3(0,1,0), 
+		UV * tile * tile_scale * 10.0 + offset + distortion + wind_dir * wind_speed * TIME,
+		vec3(0,1,0),
 		TIME * distortion_speed);
-		
+
 	float noise_value = texture(TEXTURE, UV * 10.0 - wind_dir * wind_speed ).x;
 	float alpha = noise_value;
 	COLOR.rgb = COLOR.rgb + alpha/ 15.0;
-	
+
 	//COLOR.rgb = vec3(distortion);
-	
+
 	//COLOR.rgb =texture(noise_texture, globalposition.xy * vec2(1.0/1000.0) ).xyz;
 }

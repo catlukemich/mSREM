@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://d3msiyam2g4xt"]
+[gd_scene load_steps=14 format=3 uid="uid://d3msiyam2g4xt"]
 
 [ext_resource type="Script" path="res://scripts/car.gd" id="1_qn62m"]
 [ext_resource type="Texture2D" uid="uid://bnb3y2fcwsg6q" path="res://assets/cars/Car1/black/car.png0001.png" id="2_htnt3"]
@@ -9,26 +9,98 @@
 [ext_resource type="Texture2D" uid="uid://bclfx1u0lh1gn" path="res://assets/cars/Car1/black/car.png0006.png" id="7_8fcwd"]
 [ext_resource type="Texture2D" uid="uid://c8fuhwcoeldo5" path="res://assets/cars/Car1/black/car.png0007.png" id="8_kuein"]
 [ext_resource type="Texture2D" uid="uid://dekquvoyk0arg" path="res://assets/cars/Car1/black/car.png0008.png" id="9_4u1ha"]
+[ext_resource type="Script" path="res://scripts/car_view_polygon.gd" id="10_j0ah7"]
+
+[sub_resource type="GDScript" id="GDScript_prmmk"]
+script/source = "extends Area2D
+
+
+# Get the car this view area belongs to.
+func get_car() -> Car:
+	return $Car
+"
+
+[sub_resource type="GDScript" id="GDScript_djvpp"]
+script/source = "extends Area2D
+
+
+func get_car() -> Car:
+	return $\"../..\"
+"
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ttmsh"]
+radius = 7.00003
 
 [node name="Car" type="Node2D"]
+position = Vector2(18.9239, -71.4948)
 script = ExtResource("1_qn62m")
 car_8_directions_images = Array[Texture]([ExtResource("2_htnt3"), ExtResource("3_4j4ll"), ExtResource("4_qdfhu"), ExtResource("5_eqcp7"), ExtResource("6_hehk8"), ExtResource("7_8fcwd"), ExtResource("8_kuein"), ExtResource("9_4u1ha"), ExtResource("2_htnt3"), ExtResource("3_4j4ll"), ExtResource("4_qdfhu"), ExtResource("5_eqcp7"), ExtResource("6_hehk8"), ExtResource("7_8fcwd"), ExtResource("8_kuein"), ExtResource("9_4u1ha")])
-car_speed = 180.0
+metadata/test_scene = "res://scenes/cars_test_scene.tscn"
+
+[node name="RecentlySpawnedFlagClearer" type="Timer" parent="."]
+wait_time = 0.522
+one_shot = true
+autostart = true
 
 [node name="CarSprite" type="Sprite2D" parent="."]
 position = Vector2(18, 14)
 scale = Vector2(0.539063, 0.539063)
 texture = ExtResource("2_htnt3")
 
+[node name="CarViewArea2D" type="Area2D" parent="CarSprite" groups=["TrafficLightsGroup", "cars"]]
+script = SubResource("GDScript_prmmk")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="CarSprite/CarViewArea2D"]
+script = ExtResource("10_j0ah7")
+view_distance = 1.5
+
+[node name="CarCollisionArea2D" type="Area2D" parent="CarSprite" groups=["TrafficLightsGroup", "cars"]]
+position = Vector2(-33.3913, -25.971)
+scale = Vector2(1.85507, 1.85507)
+script = SubResource("GDScript_djvpp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CarSprite/CarCollisionArea2D"]
+position = Vector2(17.0761, 15.4948)
+shape = SubResource("CircleShape2D_ttmsh")
+
+[node name="Polygon2D" type="Polygon2D" parent="CarSprite"]
+visible = false
+position = Vector2(31.6774, -86.2704)
+polygon = PackedVector2Array(-51.942, -38.9565, -50.0869, 1.85507, 40.8116, 1.85507, 40.8116, -38.9565)
+
+[node name="FuckedUp" type="Polygon2D" parent="CarSprite"]
+visible = false
+position = Vector2(-33.3913, -25.971)
+scale = Vector2(1.85507, 1.85507)
+polygon = PackedVector2Array(88.0761, -50.5052, 66.0761, -51.5052, 64.0761, 5.4948, 70.0761, 5.4948, 73.0761, -21.5052, 90.0761, -22.5052, 90.0761, -32.5052, 72.0761, -32.5052, 72.0761, -43.5052, 89.0761, -44.5052)
+
+[node name="LightsMarker" type="Polygon2D" parent="CarSprite"]
+visible = false
+position = Vector2(31.6774, -86.2704)
+polygon = PackedVector2Array(-50.0869, 24.1159, 37.1014, 20.4058, 35.2463, 53.7971, 12.9855, 35.2464, 1.85506, 46.3768, -7.42029, 29.6811, -27.8261, 46.3768, -33.3913, 35.2464, -48.2318, 48.2318)
+
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
-target_position = Vector2(-97.006, 63.5683)
+target_position = Vector2(-1099.47, -752.52)
 path_desired_distance = 6.0
-target_desired_distance = 0.1
 path_max_distance = 50.0
 path_postprocessing = 1
-path_metadata_flags = 0
+simplify_path = true
+radius = 26.61
+neighbor_distance = 256.0
+time_horizon_agents = 1.72
 debug_enabled = true
 debug_use_custom = true
 debug_path_custom_color = Color(1, 0, 0, 1)
+debug_path_custom_line_width = 2.0
 
+[node name="LightsCooldownTimer" type="Timer" parent="."]
+wait_time = 7.161
+one_shot = true
+
+[connection signal="direction_changed_signal" from="." to="CarSprite/CarViewArea2D/CollisionPolygon2D" method="_on_car_direction_changed_signal"]
+[connection signal="timeout" from="RecentlySpawnedFlagClearer" to="." method="clear_recent_spawn_flag"]
+[connection signal="area_entered" from="CarSprite/CarViewArea2D" to="." method="_on_car_view_area_2d_area_entered"]
+[connection signal="area_exited" from="CarSprite/CarViewArea2D" to="." method="_on_car_view_area_2d_area_exited"]
+[connection signal="navigation_finished" from="NavigationAgent2D" to="." method="_on_navigation_agent_2d_navigation_finished"]
 [connection signal="velocity_computed" from="NavigationAgent2D" to="." method="_on_navigation_agent_2d_velocity_computed"]
+[connection signal="timeout" from="LightsCooldownTimer" to="." method="cooldown_timeout"]

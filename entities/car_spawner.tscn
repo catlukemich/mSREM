@@ -1,0 +1,53 @@
+[gd_scene load_steps=27 format=3 uid="uid://wxxa84nitcfw"]
+
+[ext_resource type="Script" path="res://scripts/car_spawner.gd" id="1_op7ay"]
+[ext_resource type="PackedScene" uid="uid://d3msiyam2g4xt" path="res://entities/car.tscn" id="2_y2m57"]
+[ext_resource type="Texture2D" uid="uid://bnb3y2fcwsg6q" path="res://assets/cars/Car1/black/car.png0001.png" id="3_3oeoq"]
+[ext_resource type="Texture2D" uid="uid://ck0lbx8htlgb1" path="res://assets/cars/Car1/black/car.png0002.png" id="4_hgiee"]
+[ext_resource type="Texture2D" uid="uid://7308pnbjkkbt" path="res://assets/cars/Car1/black/car.png0003.png" id="5_csjsv"]
+[ext_resource type="Texture2D" uid="uid://c2ox4ghnu2qcf" path="res://assets/cars/Car1/black/car.png0004.png" id="6_lbwgk"]
+[ext_resource type="Texture2D" uid="uid://iaea0tgph2q8" path="res://assets/cars/Car1/black/car.png0005.png" id="7_ptix5"]
+[ext_resource type="Texture2D" uid="uid://bclfx1u0lh1gn" path="res://assets/cars/Car1/black/car.png0006.png" id="8_jjm1o"]
+[ext_resource type="Texture2D" uid="uid://c8fuhwcoeldo5" path="res://assets/cars/Car1/black/car.png0007.png" id="9_lhej7"]
+[ext_resource type="Texture2D" uid="uid://dekquvoyk0arg" path="res://assets/cars/Car1/black/car.png0008.png" id="10_v4kuw"]
+[ext_resource type="Texture2D" uid="uid://canhxa4d2ecv4" path="res://assets/cars/Car1/blue/car.png0001.png" id="11_qlerg"]
+[ext_resource type="Texture2D" uid="uid://clxxp10fagjow" path="res://assets/cars/Car1/blue/car.png0002.png" id="12_ixgbx"]
+[ext_resource type="Texture2D" uid="uid://bnnpctegbrbff" path="res://assets/cars/Car1/blue/car.png0003.png" id="13_y2u8f"]
+[ext_resource type="Texture2D" uid="uid://blhavtywc8bla" path="res://assets/cars/Car1/blue/car.png0004.png" id="14_c0hew"]
+[ext_resource type="Texture2D" uid="uid://b35bnd5sq3uui" path="res://assets/cars/Car1/blue/car.png0005.png" id="15_dtlfw"]
+[ext_resource type="Texture2D" uid="uid://dm4jbvhvks72i" path="res://assets/cars/Car1/blue/car.png0006.png" id="16_dbsn3"]
+[ext_resource type="Texture2D" uid="uid://kr6bai2m43h5" path="res://assets/cars/Car1/blue/car.png0007.png" id="17_m1pyh"]
+[ext_resource type="Texture2D" uid="uid://bjufxw3re1rpd" path="res://assets/cars/Car1/blue/car.png0008.png" id="18_xmn6y"]
+[ext_resource type="Texture2D" uid="uid://8tj20f3n6xtq" path="res://assets/cars/Car1/brown/car.png0001.png" id="19_p3pd4"]
+[ext_resource type="Texture2D" uid="uid://d24bubkctxg3l" path="res://assets/cars/Car1/brown/car.png0002.png" id="20_yepik"]
+[ext_resource type="Texture2D" uid="uid://livdg7x6351v" path="res://assets/cars/Car1/brown/car.png0003.png" id="21_3o6ik"]
+[ext_resource type="Texture2D" uid="uid://b34tm577sw46b" path="res://assets/cars/Car1/brown/car.png0004.png" id="22_ke48l"]
+[ext_resource type="Texture2D" uid="uid://2e3vac5kurl5" path="res://assets/cars/Car1/brown/car.png0005.png" id="23_nuvcd"]
+[ext_resource type="Texture2D" uid="uid://ct5l7h6domu4i" path="res://assets/cars/Car1/brown/car.png0006.png" id="24_t64ad"]
+[ext_resource type="Texture2D" uid="uid://bp2frgvmqxjt4" path="res://assets/cars/Car1/brown/car.png0007.png" id="25_1msfg"]
+[ext_resource type="Texture2D" uid="uid://3ralbcwxi7gp" path="res://assets/cars/Car1/brown/car.png0008.png" id="26_r8krm"]
+
+[node name="CarSpawner" type="Node2D"]
+script = ExtResource("1_op7ay")
+metadata/test_scene = "res://scenes/cars_test_scene.tscn"
+
+[node name="CarBlack" parent="." instance=ExtResource("2_y2m57")]
+position = Vector2(222.813, 233.729)
+car_8_directions_images = Array[Texture]([ExtResource("3_3oeoq"), ExtResource("4_hgiee"), ExtResource("5_csjsv"), ExtResource("6_lbwgk"), ExtResource("7_ptix5"), ExtResource("8_jjm1o"), ExtResource("9_lhej7"), ExtResource("10_v4kuw")])
+car_speed = 224.782
+
+[node name="CarBlue" parent="." instance=ExtResource("2_y2m57")]
+position = Vector2(62.5664, 551.64)
+car_8_directions_images = Array[Texture]([ExtResource("11_qlerg"), ExtResource("12_ixgbx"), ExtResource("13_y2u8f"), ExtResource("14_c0hew"), ExtResource("15_dtlfw"), ExtResource("16_dbsn3"), ExtResource("17_m1pyh"), ExtResource("18_xmn6y")])
+car_speed = 237.32
+
+[node name="CarBrown" parent="." instance=ExtResource("2_y2m57")]
+position = Vector2(-145.31, 284.52)
+car_8_directions_images = Array[Texture]([ExtResource("19_p3pd4"), ExtResource("20_yepik"), ExtResource("21_3o6ik"), ExtResource("22_ke48l"), ExtResource("23_nuvcd"), ExtResource("24_t64ad"), ExtResource("25_1msfg"), ExtResource("26_r8krm")])
+car_speed = 248.077
+
+[node name="CountDownTimer" type="Timer" parent="."]
+wait_time = 0.089
+autostart = true
+
+[connection signal="timeout" from="CountDownTimer" to="." method="_on_count_down_timer_timeout"]

@@ -1,0 +1,37 @@
+[gd_scene load_steps=7 format=4 uid="uid://d184flwy4xp5w"]
+
+[ext_resource type="TileSet" uid="uid://704huq0wqahw" path="res://tilesets/roads.tres" id="1_b320o"]
+[ext_resource type="PackedScene" uid="uid://cto3quvnnes0t" path="res://entities/scroll_camera.tscn" id="1_vo2av"]
+[ext_resource type="TileSet" uid="uid://bjpu4b6v2ijp2" path="res://tilesets/limits.tres" id="2_ygnpu"]
+[ext_resource type="PackedScene" uid="uid://wxxa84nitcfw" path="res://entities/car_spawner.tscn" id="3_hdbhj"]
+[ext_resource type="PackedScene" uid="uid://b7pmmbto7a4qo" path="res://entities/TrafficLights.tscn" id="3_pwdnk"]
+[ext_resource type="PackedScene" uid="uid://d3msiyam2g4xt" path="res://entities/car.tscn" id="4_kuvub"]
+
+[node name="Node2D" type="Node2D"]
+position = Vector2(-800, 0)
+metadata/test_scene = "res://scenes/cars_test_scene.tscn"
+
+[node name="Camera2D" parent="." instance=ExtResource("1_vo2av")]
+
+[node name="Roads" type="TileMapLayer" parent="."]
+y_sort_enabled = true
+tile_map_data = PackedByteArray("AAABAP7/AQAAAAAAAAABAP//AQAAAAAAAAACAAAAAQAAAAAAAAACAAEAAQAAAAAAAAADAAIAAQABAAAAAAACAAMAAQAAAAEAAAACAAQAAQAAAAEAAAABAAUAAQAAAAEAAAABAAYAAQAAAAEAAAADAAEAAQAAAAEAAAAEAAAAAQAAAAEAAAAEAP//AQAAAAEAAAADAAMAAQAAAAAAAAAEAAQAAQAAAAAAAAAEAAUAAQAAAAAAAAAFAAYAAQAAAAAAAAAAAAcAAQADAAIAAAAFAP7/AQACAAMAAAAAAP3/AQADAAIAAAACAPn/AQADAAMAAAABAPz/AQAAAAEAAAABAPv/AQAAAAEAAAACAPr/AQAAAAEAAAADAPr/AQAAAAAAAAADAPv/AQAAAAAAAAAEAPz/AQAAAAAAAAAEAP3/AQAAAAAAAAAFAAgAAQAAAAEAAAAEAAkAAQAAAAEAAAAEAAoAAQAAAAEAAAADAAsAAQAAAAEAAAADAAwAAQACAAIAAAACAAsAAQAAAAAAAAACAAoAAQAAAAAAAAABAAkAAQAAAAAAAAABAAgAAQAAAAAAAAAFAAcAAQACAAMAAAA=")
+tile_set = ExtResource("1_b320o")
+
+[node name="TrafficLights" parent="Roads" instance=ExtResource("3_pwdnk")]
+z_index = 1
+position = Vector2(901, 186)
+
+[node name="CityLimits" type="TileMapLayer" parent="."]
+tile_map_data = PackedByteArray("AAADAAsAAAAAAAcAAAAEAP//AAACAAAAAAABAAYAAAACAAAAAAABAPz/AAACAAAAAAA=")
+tile_set = ExtResource("2_ygnpu")
+
+[node name="CarSpawner" parent="." node_paths=PackedStringArray("objects_layer", "city_limits", "car_prototypes") instance=ExtResource("3_hdbhj")]
+z_index = 1
+y_sort_enabled = true
+objects_layer = NodePath("../Roads")
+city_limits = NodePath("../CityLimits")
+car_prototypes = [NodePath("Car")]
+
+[node name="Car" parent="CarSpawner" instance=ExtResource("4_kuvub")]
+z_index = 1

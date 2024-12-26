@@ -1,4 +1,4 @@
-@icon("res://addons/icons/parking.png")
+@icon("res://icons/parking.png")
 
 extends Node2D
 

@@ -1,5 +1,5 @@
 @tool
-@icon("res://addons/icons/park.svg")
+@icon("res://icons/park.svg")
 extends Sprite2D
 
 var skew_dir = 1

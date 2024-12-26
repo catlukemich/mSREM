@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://cjdwurvu2v6g"]
+
+[ext_resource type="Script" path="res://scripts/show_all_nodes.gd" id="1_txyqr"]
+
+[node name="ShowAllNodes" type="Node"]
+script = ExtResource("1_txyqr")

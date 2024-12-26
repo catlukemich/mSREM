@@ -1,0 +1,13 @@
+[remap]
+
+importer="merovi.svgtexture2d"
+type="SVGTexture2D"
+uid="uid://dcskirl6aia0x"
+valid=false
+
+[deps]
+
+source_file="res://addons/FancyControls/GUI/example_animation_chains/test_chain.json"
+
+[params]
+

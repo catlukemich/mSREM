@@ -1,4 +1,4 @@
-@icon("res://addons/icons/building.png")
+@icon("res://icons/building.png")
 class_name Building
 extends Sprite2D
 

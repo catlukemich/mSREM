@@ -1,5 +1,5 @@
 @tool
-@icon("res://addons/icons/cloud.png")
+@icon("res://icons/cloud.png")
 class_name Cloud
 extends Node2D
 

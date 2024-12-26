@@ -1,5 +1,5 @@
 @tool
-@icon("res://addons/icons/tree.png")
+@icon("res://icons/tree.png")
 class_name GameTree
 extends Sprite2D
 
