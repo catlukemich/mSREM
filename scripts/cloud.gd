@@ -2,16 +2,13 @@
 @icon("res://icons/cloud.png")
 class_name Cloud
 extends Node2D
-
-#@export var cloud_image: Texture
-#@export var shadow_image: Texture
-
+## The cloud image of the cloud itself
 @export var cloud_image: Texture
+## The shadow image of the cloud:
 @export var shadow_image: Texture
 @export var initial_rotation_degrees = 25
 @export var scale_variance = 0.0
 @export var cloud_speed = 200.0
-
 
 
 var random_rot_speed = (randf() - 0.5) * 0.4
@@ -28,7 +25,7 @@ func _ready() -> void:
 
 	
 		
-
+ 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	# Move myself:

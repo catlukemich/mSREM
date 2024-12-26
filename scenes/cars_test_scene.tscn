@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://cto3quvnnes0t" path="res://entities/scroll_camera.tscn" id="1_vo2av"]
 [ext_resource type="TileSet" uid="uid://bjpu4b6v2ijp2" path="res://tilesets/limits.tres" id="2_ygnpu"]
 [ext_resource type="PackedScene" uid="uid://wxxa84nitcfw" path="res://entities/car_spawner.tscn" id="3_hdbhj"]
-[ext_resource type="PackedScene" uid="uid://b7pmmbto7a4qo" path="res://entities/TrafficLights.tscn" id="3_pwdnk"]
+[ext_resource type="PackedScene" uid="uid://b7pmmbto7a4qo" path="res://entities/traffic_lights.tscn" id="3_pwdnk"]
 [ext_resource type="PackedScene" uid="uid://d3msiyam2g4xt" path="res://entities/car.tscn" id="4_kuvub"]
 
 [node name="Node2D" type="Node2D"]

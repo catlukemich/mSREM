@@ -2,15 +2,17 @@
 class_name Car
 extends Node2D
 
-
+ 
 @export var car_8_directions_images: Array[Texture]
 @export var car_target_speed: float = 100
 @export var mouse_target_position: bool = false
 @export var acceleration_speed = 0.3
 @export var braking_speed = 4
 
+@onready var navigator = $NavigationAgent2D
+@onready var view_area = $CarSprite/CarViewArea2D
+@onready var collision_area = $CarSprite/CarCollisionArea2D
 
-var became_fucked_up = false
 var car_current_speed : float
 enum Acceleration {ACCELERATING, BRAKING, CONSTANT_SPEED}
 var acceleration_state = Acceleration.ACCELERATING
@@ -23,35 +25,32 @@ signal direction_changed_signal(direction : int, rotation_degrees : float)
 var current_direction : int = 0: # Index of the current direction.
 	set(index):
 		current_direction = index
-		var rotation_degrees = index * 45
-		direction_changed_signal.emit(current_direction, rotation_degrees)
+		var new_rotation_degrees = index * 45
+		direction_changed_signal.emit(current_direction, new_rotation_degrees)
 var current_lights : TrafficLights
 var waiting_for_lights: bool = false
 var passing_lights : TrafficLights
 var just_pass_lights = false
-#var passing_lights : TrafficLights
 var do_fadeout = false
+
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	car_current_speed = 0 #<-- The cars start stopped (perhaps, should be running, when entering city limits)
 	has_recently_spawned = true
 	pass # Replace with function body.
-
-func _input(event: InputEvent) -> void:
-	if event.is_action_pressed("Press") and mouse_target_position:
-		var agent : NavigationAgent2D = $NavigationAgent2D
-		agent.target_position = get_global_mouse_position()
+	
 
 func _process(delta: float) -> void:
-	var areas = $CarSprite/CarViewArea2D.get_overlapping_areas()
+	var areas = view_area.get_overlapping_areas()
 	
 	var is_car_in_front = false
 	
 	for area in areas:
 		#if area.name == "LightsCollisionArea2D":
 			#passing_lights = area.get_traffic_lights()
-		if area.name == "CarCollisionArea2D":
+		if area.name == collision_area.name:
 			var other_car = area.get_car() as Car
 			is_car_in_front = check_is_car_in_front(other_car)
 			if is_car_in_front: 
@@ -61,7 +60,6 @@ func _process(delta: float) -> void:
 				distance_to_obstacle = 50
 	
 	if not waiting_for_lights or just_pass_lights:
-		#accelerate("Nobody in front of me")
 		accelerate()
 	else:
 		brake()
@@ -81,13 +79,7 @@ func _process(delta: float) -> void:
 				car_current_speed -= braking_speed
 	elif acceleration_state == Acceleration.BRAKING:
 		if car_current_speed > 0:
-			#var braking_factor = 10 / clamp(distance_to_obstacle - 50, 51, 999999999999)
-			#var delta_v = braking_speed * braking_factor
-			#if delta_v < 0: delta_v = 0
-			#car_current_speed -= braking_speed * braking_factor
-			#if car_current_speed < 0: car_current_speed = 0
 			car_current_speed -= braking_speed
-			
 		else: car_current_speed = 0
 			
 				
@@ -95,31 +87,22 @@ func _process(delta: float) -> void:
 		$CarSprite/LightsMarker.color = Color.RED
 	else:
 		$CarSprite/LightsMarker.color = Color.WHITE
-		
-	
-	if do_fadeout:
-		fade_out()
+
 		
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta: float) -> void:
-	var agent : NavigationAgent2D = $NavigationAgent2D
-	if agent.target_position.distance_to(global_position) < 20:
-		do_fadeout = true
-		
-	
 	if Engine.is_editor_hint():
 		if mouse_target_position:
-			agent.target_position = get_global_mouse_position()
-		if agent.is_navigation_finished(): 
+			navigator.target_position = get_global_mouse_position()
+		if navigator.is_navigation_finished(): 
 			return
 	var current_position = global_position
-	var next = agent.get_next_path_position()
+	var next = navigator.get_next_path_position()
 	var to_vector = current_position.direction_to(next)
 	
-	agent.set_velocity(to_vector)
+	navigator.set_velocity(to_vector)
 	position += to_vector * delta * car_current_speed * 2
-	
 	
 	var the_8_dir_vectors = [
 		Vector2(1, -1), # up - right
@@ -131,7 +114,6 @@ func _physics_process(delta: float) -> void:
 		Vector2(-1, -1),
 		Vector2(0, -1), # up
 	]
-	
 	
 	var corrected_to_vector = Vector2(to_vector)
 	corrected_to_vector.y *= 2 # Due to isometric grid problems
@@ -205,8 +187,7 @@ func _on_navigation_agent_2d_velocity_computed(safe_velocity: Vector2) -> void:
 
 
 func _on_navigation_agent_2d_navigation_finished() -> void:
-	do_fadeout = true
-	$NavigationAgent2D.set_velocity(Vector2.ZERO)
+	navigator.set_velocity(Vector2.ZERO)
 
 
 func clear_recent_spawn_flag() -> void:
@@ -231,7 +212,6 @@ func _on_car_view_area_2d_area_entered(area: Area2D) -> void:
 		passing_lights = lights
 		
 		if not can_go:
-			became_fucked_up = true
 			current_lights = lights
 			lights.state_changed.connect(on_lights_leave)
 			waiting_for_lights = true
@@ -252,7 +232,6 @@ func _on_car_view_area_2d_area_exited(area: Area2D) -> void:
 func on_lights_leave(state: int):
 	if check_can_go_through_lights(current_lights):
 		waiting_for_lights = false
-		became_fucked_up = false
 		$CarSprite/FuckedUp.color = Color.DEEP_PINK
 		just_pass_lights = true
 		$LightsCooldownTimer.start()
@@ -273,10 +252,5 @@ func accelerate(reason = null):
 	acceleration_state = Acceleration.ACCELERATING
 
 
-func fade_out():
-	var color : Color = $CarSprite.modulate
-	color.a -= 0.03
-	$CarSprite.modulate = color
-	if color.a == 0:
-		get_parent().remove_child(self)
+
 		
