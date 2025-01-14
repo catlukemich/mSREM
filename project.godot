@@ -30,7 +30,7 @@ window/stretch/mode="viewport"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/FancyControls/plugin.cfg", "res://addons/awesome_custom_cursor/plugin.cfg", "res://addons/collapse_folders/plugin.cfg", "res://addons/godot_test_scene/plugin.cfg", "res://addons/merovi.svgtexture2d/plugin.cfg", "res://addons/simple_tool_button/plugin.cfg")
+enabled=PackedStringArray("res://addons/FancyControls/plugin.cfg", "res://addons/awesome_custom_cursor/plugin.cfg", "res://addons/collapse_folders/plugin.cfg", "res://addons/godot_test_scene/plugin.cfg", "res://addons/merovi.svgtexture2d/plugin.cfg", "res://addons/repl/plugin.cfg", "res://addons/simple_tool_button/plugin.cfg")
 
 [file_customization]
 
@@ -47,6 +47,7 @@ folder_colors={
 [global_group]
 
 TrafficLightsGroup=""
+Cars=""
 
 [input]
 

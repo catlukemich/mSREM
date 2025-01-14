@@ -1,0 +1,95 @@
+[gd_scene load_steps=12 format=3 uid="uid://ckmrjbqi1vj5r"]
+
+[ext_resource type="Script" path="res://scripts/road_crossing.gd" id="1_w0apu"]
+[ext_resource type="Texture2D" uid="uid://5mglioth1nvm" path="res://assets/roads.png" id="2_4uina"]
+[ext_resource type="Texture2D" uid="uid://j7kuhdeqaxno" path="res://assets/signs/Priority1.png" id="3_lh3yk"]
+[ext_resource type="Texture2D" uid="uid://bq8byblxtwuc6" path="res://assets/signs/Priority3.png" id="4_1oelv"]
+[ext_resource type="Texture2D" uid="uid://bhbgo8xbary1o" path="res://assets/signs/Yield0.png" id="5_ly7mh"]
+[ext_resource type="Texture2D" uid="uid://cc2ahfyw7aq63" path="res://assets/signs/Yield3.png" id="6_vk6df"]
+[ext_resource type="Texture2D" uid="uid://dqlxg7smieky" path="res://assets/signs/Priority0.png" id="7_4qhtn"]
+[ext_resource type="Texture2D" uid="uid://cokgmb0nj3c0a" path="res://assets/signs/Priority2.png" id="8_0yxre"]
+[ext_resource type="Texture2D" uid="uid://bb37box4oe37y" path="res://assets/signs/Yield2.png" id="9_mer7d"]
+[ext_resource type="Texture2D" uid="uid://c07jxyitn2gfd" path="res://assets/signs/Yield1.png" id="10_6qbkf"]
+
+[sub_resource type="GDScript" id="GDScript_7y8ee"]
+script/source = "extends Area2D
+
+
+func get_road_crossing() -> RoadCrossing:
+	return $\"..\"
+"
+
+[node name="RoadCrossing" type="Node2D"]
+script = ExtResource("1_w0apu")
+metadata/test_scene = "res://scenes/testing/road_crossing_test.tscn"
+
+[node name="Tiles" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("2_4uina")
+offset = Vector2(-128, 128)
+metadata/_edit_lock_ = true
+
+[node name="CrossingWEN" type="Node2D" parent="."]
+visible = false
+
+[node name="Priority1" type="Sprite2D" parent="CrossingWEN"]
+position = Vector2(119, 0)
+texture = ExtResource("3_lh3yk")
+
+[node name="Priority3" type="Sprite2D" parent="CrossingWEN"]
+position = Vector2(-115, 4)
+texture = ExtResource("4_1oelv")
+
+[node name="Yield0" type="Sprite2D" parent="CrossingWEN"]
+position = Vector2(2, -58)
+texture = ExtResource("5_ly7mh")
+
+[node name="CrossingNSW" type="Node2D" parent="."]
+visible = false
+
+[node name="Yield3" type="Sprite2D" parent="CrossingNSW"]
+position = Vector2(-115, -2)
+texture = ExtResource("6_vk6df")
+
+[node name="Priority0" type="Sprite2D" parent="CrossingNSW"]
+position = Vector2(1, -62)
+texture = ExtResource("7_4qhtn")
+
+[node name="Priority2" type="Sprite2D" parent="CrossingNSW"]
+position = Vector2(0, 54)
+texture = ExtResource("8_0yxre")
+
+[node name="CrossingWES" type="Node2D" parent="."]
+
+[node name="Priority1" type="Sprite2D" parent="CrossingWES"]
+position = Vector2(115, -4)
+texture = ExtResource("3_lh3yk")
+
+[node name="Priority3" type="Sprite2D" parent="CrossingWES"]
+position = Vector2(-115, -3)
+texture = ExtResource("4_1oelv")
+
+[node name="Yield2" type="Sprite2D" parent="CrossingWES"]
+position = Vector2(2, 54)
+texture = ExtResource("9_mer7d")
+
+[node name="CrossingNSE" type="Node2D" parent="."]
+visible = false
+
+[node name="Priority0" type="Sprite2D" parent="CrossingNSE"]
+position = Vector2(1, -60)
+texture = ExtResource("7_4qhtn")
+
+[node name="Priority2" type="Sprite2D" parent="CrossingNSE"]
+position = Vector2(1, 56)
+texture = ExtResource("8_0yxre")
+
+[node name="Yield1" type="Sprite2D" parent="CrossingNSE"]
+position = Vector2(120, -2)
+texture = ExtResource("10_6qbkf")
+
+[node name="RoadCrossingArea2D" type="Area2D" parent="." groups=["Cars"]]
+script = SubResource("GDScript_7y8ee")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RoadCrossingArea2D"]
+polygon = PackedVector2Array(-68, 0, 1, -41, 72, 0, 0, 39)

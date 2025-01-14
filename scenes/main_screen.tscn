@@ -313,7 +313,7 @@ position = Vector2(110, -75)
 tile_map_data = PackedByteArray("AAD9/woAAAACAAIAAAD+/wgAAAABAAQAAAD9/wkAAAABAAQAAAD//wYAAAABAAQAAAD//wUAAAACAAQAAAAAAAQAAAABAAQAAAAAAAMAAAACAAQAAAABAAIAAAABAAQAAAABAAEAAAACAAQAAAACAAAAAAAEAAIAAAADAAAAAAABAAYAAAAEAAAAAAAEAAYAAAAFAAAAAAAEAAQAAAAGAAAAAAAEAAQAAAAHAAAAAAAEAAQAAAAIAAAAAAAEAAQAAAAJAAAAAAAEAAQAAAAKAAAAAAAEAAQAAAALAAAAAAAEAAQAAAAMAAAAAAAEAAQAAAANAAAAAAAEAAQAAAAOAAAAAAAEAAQAAAAPAAAAAAAEAAQAAAAQAAAAAAAEAAQAAAARAAAAAAAEAAQAAAASAAAAAAAEAAQAAAD8/woAAAAEAAYAAAD7/woAAAABAAYAAAD6/woAAAAEAAQAAAD5/woAAAAEAAQAAAD4/woAAAAEAAQAAAD3/woAAAAEAAQAAAD+/wcAAAABAAQAAAA=")
 
 [node name="Train" parent="Objects Layer/Rails" node_paths=PackedStringArray("travel_path") instance=ExtResource("18_5uo0p")]
-position = Vector2(-4457.35, 1317.22)
+position = Vector2(6165.23, 37)
 speed = 400.0
 travel_path = NodePath("../Path2D")
 num_wagons = 13
@@ -350,11 +350,11 @@ script = SubResource("GDScript_pv88i")
 metadata/_edit_group_ = true
 
 [node name="Cloud3" parent="Objects Layer/Clouds" instance=ExtResource("5_0v4t5")]
-position = Vector2(1079.49, 1368.43)
+position = Vector2(-8021.38, 7913.8)
 cloud_speed = 177.94
 
 [node name="Cloud1" parent="Objects Layer/Clouds" instance=ExtResource("5_0v4t5")]
-position = Vector2(4888.55, 2390.2)
+position = Vector2(544.926, 791.637)
 cloud_image = ExtResource("5_xagrw")
 shadow_image = ExtResource("6_6o5rc")
 initial_rotation_degrees = 411
@@ -362,18 +362,18 @@ scale_variance = 0.7
 cloud_speed = 180.635
 
 [node name="Cloud2" parent="Objects Layer/Clouds" instance=ExtResource("5_0v4t5")]
-position = Vector2(-775.29, 2982.68)
+position = Vector2(-7250.03, 1125.97)
 cloud_speed = 184.645
 
 [node name="Cloud5" parent="Objects Layer/Clouds" instance=ExtResource("5_0v4t5")]
-position = Vector2(2846.14, -1708.43)
+position = Vector2(-6171.54, 2532.24)
 cloud_speed = 175.44
 
 [node name="Cloud6" parent="Objects Layer/Clouds" instance=ExtResource("5_0v4t5")]
-position = Vector2(-3205.58, -774.058)
+position = Vector2(-7880.55, 5436.11)
 
 [node name="Cloud4" parent="Objects Layer/Clouds" instance=ExtResource("5_0v4t5")]
-position = Vector2(-6343.62, 4771.12)
+position = Vector2(-3295.61, 3859.86)
 cloud_image = ExtResource("7_dmxy8")
 shadow_image = ExtResource("6_e32yx")
 cloud_speed = 191.095
@@ -383,576 +383,573 @@ y_sort_enabled = true
 script = SubResource("GDScript_tqhbg")
 
 [node name="Tree" parent="Objects Layer/Trees" instance=ExtResource("16_mom80")]
-modulate = Color(0.779123, 0.985486, 1, 1)
+modulate = Color(0.920134, 0.839999, 1, 1)
 y_sort_enabled = false
 position = Vector2(-392.5, 20)
 scale = Vector2(1.2, 1.2)
-skew = 0.0829433
-texture = ExtResource("24_q0l0v")
+skew = 0.0585557
+texture = ExtResource("19_jbtuy")
 
 [node name="Tree21" parent="Objects Layer/Trees" instance=ExtResource("16_mom80")]
-modulate = Color(0.921838, 0.921209, 1, 1)
+modulate = Color(0.760604, 0.896468, 1, 1)
 y_sort_enabled = false
 position = Vector2(-392.5, 20)
 scale = Vector2(1.2, 1.2)
-skew = 0.0826254
+skew = 0.0780218
 
 [node name="Tree12" parent="Objects Layer/Trees" instance=ExtResource("16_mom80")]
-modulate = Color(0.769222, 0.919285, 1, 1)
+modulate = Color(0.899899, 0.91325, 1, 1)
 y_sort_enabled = false
 position = Vector2(-857.5, 2650)
 scale = Vector2(1.2, 1.2)
-skew = 0.0826339
+skew = 0.0325553
 
 [node name="Tree13" parent="Objects Layer/Trees" instance=ExtResource("16_mom80")]
-modulate = Color(0.868848, 0.916205, 1, 1)
+modulate = Color(0.921579, 0.708888, 1, 1)
 y_sort_enabled = false
 position = Vector2(-1047.5, 2555)
 scale = Vector2(1.2, 1.2)
-skew = 0.081188
+skew = 0.0771398
 texture = ExtResource("19_jbtuy")
 
 [node name="Tree14" parent="Objects Layer/Trees" instance=ExtResource("16_mom80")]
-modulate = Color(0.984348, 0.735265, 1, 1)
+modulate = Color(0.79094, 0.807597, 1, 1)
 y_sort_enabled = false
 position = Vector2(-805, 2385)
 scale = Vector2(1.2, 1.2)
-skew = 0.0860615
-texture = ExtResource("11_vkhtc")
+skew = 0.0365048
 
 [node name="Tree15" parent="Objects Layer/Trees" instance=ExtResource("16_mom80")]
-modulate = Color(0.758206, 0.767875, 1, 1)
+modulate = Color(0.782807, 0.92932, 1, 1)
 y_sort_enabled = false
 position = Vector2(-602.5, 2215)
 scale = Vector2(1.2, 1.2)
-skew = 0.0939252
-texture = ExtResource("11_vkhtc")
+skew = 0.0639927
 
 [node name="Tree16" parent="Objects Layer/Trees" instance=ExtResource("16_mom80")]
-modulate = Color(0.872647, 0.75242, 1, 1)
+modulate = Color(0.761101, 0.732484, 1, 1)
 y_sort_enabled = false
 position = Vector2(-667.5, 2780)
 scale = Vector2(1.2, 1.2)
-skew = 0.0951089
+skew = 0.00529419
 texture = ExtResource("11_vkhtc")
 
 [node name="Tree17" parent="Objects Layer/Trees" instance=ExtResource("16_mom80")]
-modulate = Color(0.959215, 0.732098, 1, 1)
+modulate = Color(0.713183, 0.979344, 1, 1)
 y_sort_enabled = false
 position = Vector2(-30, 3092.5)
 scale = Vector2(1.2, 1.2)
-skew = 0.0920285
+skew = 0.0902321
 texture = ExtResource("11_vkhtc")
 
 [node name="Tree18" parent="Objects Layer/Trees" instance=ExtResource("16_mom80")]
-modulate = Color(0.714871, 0.948866, 1, 1)
+modulate = Color(0.998988, 0.864923, 1, 1)
 y_sort_enabled = false
 position = Vector2(137.5, 3207.5)
 scale = Vector2(1.2, 1.2)
-skew = 0.0831704
-texture = ExtResource("19_jbtuy")
+skew = 0.0294386
+texture = ExtResource("24_q0l0v")
 
 [node name="Tree19" parent="Objects Layer/Trees" instance=ExtResource("16_mom80")]
-modulate = Color(0.874329, 0.73013, 1, 1)
+modulate = Color(0.979026, 0.966277, 1, 1)
 y_sort_enabled = false
 position = Vector2(315, 3307.5)
 scale = Vector2(1.2, 1.2)
-skew = 0.0982829
-texture = ExtResource("11_vkhtc")
+skew = 0.0111439
+texture = ExtResource("19_jbtuy")
 
 [node name="Tree20" parent="Objects Layer/Trees" instance=ExtResource("16_mom80")]
-modulate = Color(0.969953, 0.892446, 1, 1)
+modulate = Color(0.842036, 0.710783, 1, 1)
 y_sort_enabled = false
 position = Vector2(315, 3307.5)
 scale = Vector2(1.2, 1.2)
-skew = 0.0831776
+skew = 0.0294458
 texture = ExtResource("11_vkhtc")
 
 [node name="Tree2" parent="Objects Layer/Trees" instance=ExtResource("16_mom80")]
-modulate = Color(0.934289, 0.848525, 1, 1)
+modulate = Color(0.934149, 0.9595, 1, 1)
 y_sort_enabled = false
 position = Vector2(-555, -67.5)
 scale = Vector2(1.2, 1.2)
-skew = 0.0835188
-texture = ExtResource("11_vkhtc")
+skew = 0.0805028
+texture = ExtResource("19_jbtuy")
 
 [node name="Tree4" parent="Objects Layer/Trees" instance=ExtResource("16_mom80")]
-modulate = Color(0.760022, 0.774354, 1, 1)
+modulate = Color(0.79039, 0.958332, 1, 1)
 y_sort_enabled = false
 position = Vector2(-495, 380)
 scale = Vector2(1.2, 1.2)
-skew = 0.0829323
-texture = ExtResource("11_vkhtc")
+skew = 0.0585447
 
 [node name="Tree5" parent="Objects Layer/Trees" instance=ExtResource("16_mom80")]
-modulate = Color(0.800349, 0.893642, 1, 1)
+modulate = Color(0.971696, 0.953648, 1, 1)
 y_sort_enabled = false
 position = Vector2(-302.5, 402.5)
 scale = Vector2(1.2, 1.2)
-skew = 0.0857815
+skew = 0.0950688
+texture = ExtResource("24_q0l0v")
 
 [node name="Tree22" parent="Objects Layer/Trees" instance=ExtResource("16_mom80")]
-modulate = Color(0.740706, 0.942255, 1, 1)
+modulate = Color(0.85205, 0.969531, 1, 1)
 y_sort_enabled = false
 position = Vector2(-1805, 2560)
 scale = Vector2(1.2, 1.2)
-skew = 0.0842674
-texture = ExtResource("24_q0l0v")
+skew = 0.0596103
 
 [node name="Tree25" parent="Objects Layer/Trees" instance=ExtResource("16_mom80")]
-modulate = Color(0.803901, 0.717305, 1, 1)
+modulate = Color(0.717151, 0.78031, 1, 1)
 y_sort_enabled = false
 position = Vector2(-2340, 2815)
 scale = Vector2(1.2, 1.2)
-skew = 0.0832869
+skew = 0.0225142
 texture = ExtResource("19_jbtuy")
 
 [node name="Tree26" parent="Objects Layer/Trees" instance=ExtResource("16_mom80")]
-modulate = Color(0.989704, 0.988909, 1, 1)
+modulate = Color(0.73502, 0.839539, 1, 1)
 y_sort_enabled = false
 position = Vector2(-3855, 2695)
 scale = Vector2(1.2, 1.2)
-skew = 0.082933
-texture = ExtResource("11_vkhtc")
+skew = 0.0585454
 
 [node name="Tree27" parent="Objects Layer/Trees" instance=ExtResource("16_mom80")]
-modulate = Color(0.911599, 0.794084, 1, 1)
+modulate = Color(0.970176, 0.874106, 1, 1)
 y_sort_enabled = false
 position = Vector2(-3787.5, 2540)
 scale = Vector2(1.2, 1.2)
-skew = 0.0844722
-texture = ExtResource("24_q0l0v")
+skew = 0.0805399
 
 [node name="Tree28" parent="Objects Layer/Trees" instance=ExtResource("16_mom80")]
-modulate = Color(0.878874, 0.79658, 1, 1)
+modulate = Color(0.767995, 0.838252, 1, 1)
 y_sort_enabled = false
 position = Vector2(-3962.5, 2635)
 scale = Vector2(1.2, 1.2)
-skew = 0.0951119
-texture = ExtResource("11_vkhtc")
+skew = 0.00529719
+texture = ExtResource("19_jbtuy")
 
 [node name="Tree29" parent="Objects Layer/Trees" instance=ExtResource("16_mom80")]
-modulate = Color(0.820125, 0.848225, 1, 1)
+modulate = Color(0.987914, 0.853082, 1, 1)
 y_sort_enabled = false
 position = Vector2(-3790, 2812.5)
 scale = Vector2(1.2, 1.2)
-skew = 0.0814333
+skew = 0.0107247
 texture = ExtResource("24_q0l0v")
 
 [node name="Tree30" parent="Objects Layer/Trees" instance=ExtResource("16_mom80")]
-modulate = Color(0.821245, 0.705539, 1, 1)
+modulate = Color(0.703913, 0.872337, 1, 1)
 y_sort_enabled = false
 position = Vector2(-3655, 2685)
 scale = Vector2(1.2, 1.2)
-skew = 0.095692
+skew = 0.00936681
 texture = ExtResource("19_jbtuy")
 
 [node name="Tree31" parent="Objects Layer/Trees" instance=ExtResource("16_mom80")]
-modulate = Color(0.821327, 0.853832, 1, 1)
+modulate = Color(0.78919, 0.822706, 1, 1)
 y_sort_enabled = false
 position = Vector2(-3547.5, 2537.5)
 scale = Vector2(1.2, 1.2)
-skew = 0.0835982
-texture = ExtResource("24_q0l0v")
+skew = 0.0805822
 
 [node name="Tree32" parent="Objects Layer/Trees" instance=ExtResource("16_mom80")]
-modulate = Color(0.71832, 0.869313, 1, 1)
+modulate = Color(0.746538, 0.870477, 1, 1)
 y_sort_enabled = false
 position = Vector2(-3575, 2470)
 scale = Vector2(1.2, 1.2)
-skew = 0.0934332
-texture = ExtResource("24_q0l0v")
+skew = 0.0832974
 
 [node name="Tree33" parent="Objects Layer/Trees" instance=ExtResource("16_mom80")]
-modulate = Color(0.870082, 0.911856, 1, 1)
+modulate = Color(0.866662, 0.999015, 1, 1)
 y_sort_enabled = false
 position = Vector2(-3407.5, 2685)
 scale = Vector2(1.2, 1.2)
-skew = 0.0868362
-texture = ExtResource("24_q0l0v")
+skew = 0.0293617
+texture = ExtResource("11_vkhtc")
 
 [node name="Tree34" parent="Objects Layer/Trees" instance=ExtResource("16_mom80")]
-modulate = Color(0.825036, 0.972908, 1, 1)
+modulate = Color(0.998138, 0.81508, 1, 1)
 y_sort_enabled = false
 position = Vector2(-3562.5, 2770)
 scale = Vector2(1.2, 1.2)
-skew = 0.0945101
+skew = 0.0370803
 
 [node name="Tree35" parent="Objects Layer/Trees" instance=ExtResource("16_mom80")]
-modulate = Color(0.780125, 0.830085, 1, 1)
+modulate = Color(0.858588, 0.868859, 1, 1)
 y_sort_enabled = false
 position = Vector2(-3547.5, 2872.5)
 scale = Vector2(1.2, 1.2)
-skew = 0.0937466
-texture = ExtResource("19_jbtuy")
+skew = 0.0683455
 
 [node name="Tree36" parent="Objects Layer/Trees" instance=ExtResource("16_mom80")]
-modulate = Color(0.943649, 0.719746, 1, 1)
+modulate = Color(0.750167, 0.892026, 1, 1)
 y_sort_enabled = false
 position = Vector2(-3342.5, 2775)
 scale = Vector2(1.2, 1.2)
-skew = 0.0847031
+skew = 0.0947105
 
 [node name="Tree37" parent="Objects Layer/Trees" instance=ExtResource("16_mom80")]
-modulate = Color(0.94813, 0.886909, 1, 1)
+modulate = Color(0.87063, 0.824023, 1, 1)
 y_sort_enabled = false
 position = Vector2(-3710, 2895)
 scale = Vector2(1.2, 1.2)
-skew = 0.0891767
-texture = ExtResource("11_vkhtc")
+skew = 0.031948
 
 [node name="Tree23" parent="Objects Layer/Trees" instance=ExtResource("16_mom80")]
-modulate = Color(0.720676, 0.812467, 1, 1)
+modulate = Color(0.789748, 0.796832, 1, 1)
 y_sort_enabled = false
 position = Vector2(-2105, 2347.5)
 scale = Vector2(1.2, 1.2)
-skew = 0.100941
+skew = 0.0578742
+texture = ExtResource("24_q0l0v")
 
 [node name="Tree24" parent="Objects Layer/Trees" instance=ExtResource("16_mom80")]
-modulate = Color(0.838816, 0.868859, 1, 1)
+modulate = Color(0.91133, 0.929594, 1, 1)
 y_sort_enabled = false
 position = Vector2(-1652.5, 2090)
 scale = Vector2(1.2, 1.2)
-skew = 0.0856645
-texture = ExtResource("19_jbtuy")
+skew = 0.0799881
 
 [node name="Tree6" parent="Objects Layer/Trees" instance=ExtResource("16_mom80")]
-modulate = Color(0.964757, 0.874079, 1, 1)
+modulate = Color(0.982547, 0.958369, 1, 1)
 y_sort_enabled = false
 position = Vector2(262.5, 372.5)
 scale = Vector2(1.2, 1.2)
-skew = 0.0847056
+skew = 0.094713
 texture = ExtResource("11_vkhtc")
 
 [node name="Tree7" parent="Objects Layer/Trees" instance=ExtResource("16_mom80")]
-modulate = Color(0.966316, 0.884357, 1, 1)
+modulate = Color(0.946199, 0.95599, 1, 1)
 y_sort_enabled = false
 position = Vector2(670, 225)
 scale = Vector2(1.2, 1.2)
-skew = 0.0860626
-texture = ExtResource("11_vkhtc")
+skew = 0.0459214
 
 [node name="Tree8" parent="Objects Layer/Trees" instance=ExtResource("16_mom80")]
-modulate = Color(0.988775, 0.769653, 1, 1)
+modulate = Color(0.840438, 0.76559, 1, 1)
 y_sort_enabled = false
 position = Vector2(965, 60)
 scale = Vector2(1.2, 1.2)
-skew = 0.0851447
+skew = 0.0415703
 texture = ExtResource("24_q0l0v")
 
 [node name="Tree38" parent="Objects Layer/Trees" instance=ExtResource("16_mom80")]
-modulate = Color(0.872408, 0.873385, 1, 1)
+modulate = Color(0.849723, 0.981174, 1, 1)
 y_sort_enabled = false
 position = Vector2(-690, 500)
 scale = Vector2(1.2, 1.2)
-skew = 0.0877226
-texture = ExtResource("19_jbtuy")
+skew = 0.055779
 
 [node name="Tree39" parent="Objects Layer/Trees" instance=ExtResource("16_mom80")]
-modulate = Color(0.998598, 0.812935, 1, 1)
+modulate = Color(0.964994, 0.701115, 1, 1)
 y_sort_enabled = false
 position = Vector2(-905, 515)
 scale = Vector2(1.2, 1.2)
-skew = 0.0799184
-texture = ExtResource("11_vkhtc")
+skew = 0.0670449
+texture = ExtResource("24_q0l0v")
 
 [node name="Tree40" parent="Objects Layer/Trees" instance=ExtResource("16_mom80")]
-modulate = Color(0.724904, 0.73942, 1, 1)
+modulate = Color(0.90501, 0.72152, 1, 1)
 y_sort_enabled = false
 position = Vector2(-1070, 475)
 scale = Vector2(1.2, 1.2)
-skew = 0.0849669
-texture = ExtResource("24_q0l0v")
+skew = 0.0301821
 
 [node name="Tree41" parent="Objects Layer/Trees" instance=ExtResource("16_mom80")]
-modulate = Color(0.885285, 0.72074, 1, 1)
+modulate = Color(0.824516, 0.848406, 1, 1)
 y_sort_enabled = false
 position = Vector2(-1445, 420)
 scale = Vector2(1.2, 1.2)
-skew = 0.0855684
+skew = 0.0309207
 texture = ExtResource("24_q0l0v")
 
 [node name="Tree42" parent="Objects Layer/Trees" instance=ExtResource("16_mom80")]
-modulate = Color(0.826124, 0.853755, 1, 1)
+modulate = Color(0.801495, 0.941691, 1, 1)
 y_sort_enabled = false
 position = Vector2(-1215, 505)
 scale = Vector2(1.2, 1.2)
-skew = 0.0884885
+skew = 0.0582342
 texture = ExtResource("19_jbtuy")
 
 [node name="Tree43" parent="Objects Layer/Trees" instance=ExtResource("16_mom80")]
-modulate = Color(0.952454, 0.940277, 1, 1)
+modulate = Color(0.75305, 0.775458, 1, 1)
 y_sort_enabled = false
 position = Vector2(-555, 525)
 scale = Vector2(1.2, 1.2)
-skew = 0.0945741
-texture = ExtResource("24_q0l0v")
+skew = 0.00505952
+texture = ExtResource("11_vkhtc")
 
 [node name="Tree62" parent="Objects Layer/Trees" instance=ExtResource("16_mom80")]
-modulate = Color(0.886735, 0.820318, 1, 1)
+modulate = Color(0.791931, 0.914891, 1, 1)
 y_sort_enabled = false
 position = Vector2(632.5, 1330)
 scale = Vector2(1.2, 1.2)
-skew = 0.0942786
+skew = 0.0242831
 texture = ExtResource("19_jbtuy")
 
 [node name="Tree63" parent="Objects Layer/Trees" instance=ExtResource("16_mom80")]
-modulate = Color(0.905221, 0.758704, 1, 1)
+modulate = Color(0.750075, 0.728456, 1, 1)
 y_sort_enabled = false
 position = Vector2(1002.5, 1525)
 scale = Vector2(1.2, 1.2)
-skew = 0.0824085
-texture = ExtResource("19_jbtuy")
+skew = 0.0161511
 
 [node name="Tree64" parent="Objects Layer/Trees" instance=ExtResource("16_mom80")]
-modulate = Color(0.814296, 0.946488, 1, 1)
+modulate = Color(0.765661, 0.783416, 1, 1)
 y_sort_enabled = false
 position = Vector2(1645, 1477.5)
 scale = Vector2(1.2, 1.2)
-skew = 0.0920295
-texture = ExtResource("11_vkhtc")
+skew = 0.00115821
+texture = ExtResource("19_jbtuy")
 
 [node name="Tree65" parent="Objects Layer/Trees" instance=ExtResource("16_mom80")]
-modulate = Color(0.981722, 0.876146, 1, 1)
+modulate = Color(0.885615, 0.835249, 1, 1)
 y_sort_enabled = false
 position = Vector2(2152.5, 1247.5)
 scale = Vector2(1.2, 1.2)
-skew = 0.0982391
+skew = 0.086384
+texture = ExtResource("24_q0l0v")
 
 [node name="Tree66" parent="Objects Layer/Trees" instance=ExtResource("16_mom80")]
-modulate = Color(0.715796, 0.851235, 1, 1)
+modulate = Color(0.712285, 0.851238, 1, 1)
 y_sort_enabled = false
 position = Vector2(1550, 877.5)
 scale = Vector2(1.2, 1.2)
-skew = 0.0652049
+skew = 0.00619445
+texture = ExtResource("19_jbtuy")
 
 [node name="Tree67" parent="Objects Layer/Trees" instance=ExtResource("16_mom80")]
-modulate = Color(0.801873, 0.741702, 1, 1)
+modulate = Color(0.79682, 0.827545, 1, 1)
 y_sort_enabled = false
 position = Vector2(1395, 700)
 scale = Vector2(1.2, 1.2)
-skew = 0.0918116
+skew = 0.0314976
 texture = ExtResource("19_jbtuy")
 
 [node name="Tree68" parent="Objects Layer/Trees" instance=ExtResource("16_mom80")]
-modulate = Color(0.805353, 0.905723, 1, 1)
+modulate = Color(0.731645, 0.9572, 1, 1)
 y_sort_enabled = false
 position = Vector2(1582.5, 735)
 scale = Vector2(1.2, 1.2)
-skew = 0.0814758
+skew = 0.0225113
+texture = ExtResource("19_jbtuy")
 
 [node name="Tree69" parent="Objects Layer/Trees" instance=ExtResource("16_mom80")]
-modulate = Color(0.905786, 0.784123, 1, 1)
+modulate = Color(0.763217, 0.722889, 1, 1)
 y_sort_enabled = false
 position = Vector2(1582.5, 735)
 scale = Vector2(1.2, 1.2)
-skew = 0.095691
+skew = 0.00936581
 texture = ExtResource("24_q0l0v")
 
 [node name="Tree70" parent="Objects Layer/Trees" instance=ExtResource("16_mom80")]
-modulate = Color(0.74409, 0.717818, 1, 1)
+modulate = Color(0.90615, 0.841412, 1, 1)
 y_sort_enabled = false
 position = Vector2(-1430, 1680)
 scale = Vector2(1.2, 1.2)
-skew = 0.085279
+skew = 0.0753241
+texture = ExtResource("24_q0l0v")
 
 [node name="Tree71" parent="Objects Layer/Trees" instance=ExtResource("16_mom80")]
-modulate = Color(0.741722, 0.885248, 1, 1)
+modulate = Color(0.923458, 0.728, 1, 1)
 y_sort_enabled = false
 position = Vector2(-1715, 1705)
 scale = Vector2(1.2, 1.2)
-skew = 0.0973117
+skew = 0.0680847
+texture = ExtResource("11_vkhtc")
 
 [node name="Tree72" parent="Objects Layer/Trees" instance=ExtResource("16_mom80")]
-modulate = Color(0.904599, 0.893925, 1, 1)
+modulate = Color(0.763355, 0.765394, 1, 1)
 y_sort_enabled = false
 position = Vector2(-1850, 1637.5)
 scale = Vector2(1.2, 1.2)
-skew = 0.0973098
+skew = 0.0680828
+texture = ExtResource("11_vkhtc")
 
 [node name="Tree73" parent="Objects Layer/Trees" instance=ExtResource("16_mom80")]
-modulate = Color(0.978823, 0.921865, 1, 1)
+modulate = Color(0.735626, 0.7691, 1, 1)
 y_sort_enabled = false
 position = Vector2(-1937.5, 1527.5)
 scale = Vector2(1.2, 1.2)
-skew = 0.0936774
+skew = 0.0914855
 
 [node name="Tree74" parent="Objects Layer/Trees" instance=ExtResource("16_mom80")]
-modulate = Color(0.765891, 0.87276, 1, 1)
+modulate = Color(0.88467, 0.810822, 1, 1)
 y_sort_enabled = false
 position = Vector2(-2155, 1690)
 scale = Vector2(1.2, 1.2)
-skew = 0.0918508
+skew = 0.0416384
 texture = ExtResource("24_q0l0v")
 
 [node name="Tree75" parent="Objects Layer/Trees" instance=ExtResource("16_mom80")]
-modulate = Color(0.976175, 0.810636, 1, 1)
+modulate = Color(0.767506, 0.839924, 1, 1)
 y_sort_enabled = false
 position = Vector2(-1880, 1820)
 scale = Vector2(1.2, 1.2)
-skew = 0.0846679
-texture = ExtResource("11_vkhtc")
+skew = 0.0911834
 
 [node name="Tree76" parent="Objects Layer/Trees" instance=ExtResource("16_mom80")]
-modulate = Color(0.907121, 0.844116, 1, 1)
+modulate = Color(0.766589, 0.791107, 1, 1)
 y_sort_enabled = false
 position = Vector2(-1637.5, 1787.5)
 scale = Vector2(1.2, 1.2)
-skew = 0.0934337
+skew = 0.0832979
 texture = ExtResource("11_vkhtc")
 
 [node name="Tree77" parent="Objects Layer/Trees" instance=ExtResource("16_mom80")]
-modulate = Color(0.987163, 0.72388, 1, 1)
+modulate = Color(0.887424, 0.912949, 1, 1)
 y_sort_enabled = false
 position = Vector2(-1637.5, 1787.5)
 scale = Vector2(1.2, 1.2)
-skew = 0.0996267
-texture = ExtResource("19_jbtuy")
+skew = 0.0211197
 
 [node name="Tree44" parent="Objects Layer/Trees" instance=ExtResource("16_mom80")]
-modulate = Color(0.869753, 0.918969, 1, 1)
+modulate = Color(0.713823, 0.739742, 1, 1)
 y_sort_enabled = false
 position = Vector2(-660, 382.5)
 scale = Vector2(1.2, 1.2)
-skew = 0.0973094
+skew = 0.0680824
+texture = ExtResource("19_jbtuy")
 
 [node name="Tree45" parent="Objects Layer/Trees" instance=ExtResource("16_mom80")]
-modulate = Color(0.790419, 0.8096, 1, 1)
+modulate = Color(0.74167, 0.849751, 1, 1)
 y_sort_enabled = false
 position = Vector2(-760, 577.5)
 scale = Vector2(1.2, 1.2)
-skew = 0.0875718
+skew = 0.0119087
+texture = ExtResource("19_jbtuy")
 
 [node name="Tree46" parent="Objects Layer/Trees" instance=ExtResource("16_mom80")]
-modulate = Color(0.960617, 0.72584, 1, 1)
+modulate = Color(0.856412, 0.731588, 1, 1)
 y_sort_enabled = false
 position = Vector2(-890, 652.5)
 scale = Vector2(1.2, 1.2)
-skew = 0.0878775
+skew = 0.0753203
 texture = ExtResource("11_vkhtc")
 
 [node name="Tree47" parent="Objects Layer/Trees" instance=ExtResource("16_mom80")]
-modulate = Color(0.753118, 0.859821, 1, 1)
+modulate = Color(0.799644, 0.824003, 1, 1)
 y_sort_enabled = false
 position = Vector2(-1055, 652.5)
 scale = Vector2(1.2, 1.2)
-skew = 0.0856178
+skew = 0.0540871
+texture = ExtResource("24_q0l0v")
 
 [node name="Tree48" parent="Objects Layer/Trees" instance=ExtResource("16_mom80")]
-modulate = Color(0.787727, 0.80247, 1, 1)
+modulate = Color(0.926203, 0.903625, 1, 1)
 y_sort_enabled = false
 position = Vector2(-1160, 745)
 scale = Vector2(1.2, 1.2)
-skew = 0.0985084
-texture = ExtResource("19_jbtuy")
+skew = 0.047062
+texture = ExtResource("11_vkhtc")
 
 [node name="Tree49" parent="Objects Layer/Trees" instance=ExtResource("16_mom80")]
-modulate = Color(0.914274, 0.985487, 1, 1)
+modulate = Color(0.852644, 0.763801, 1, 1)
 y_sort_enabled = false
 position = Vector2(-1240, 635)
 scale = Vector2(1.2, 1.2)
-skew = 0.0923317
-texture = ExtResource("11_vkhtc")
+skew = 0.0151944
+texture = ExtResource("24_q0l0v")
 
 [node name="Tree50" parent="Objects Layer/Trees" instance=ExtResource("16_mom80")]
-modulate = Color(0.790224, 0.987298, 1, 1)
+modulate = Color(0.859408, 0.928901, 1, 1)
 y_sort_enabled = false
 position = Vector2(-1405, 605)
 scale = Vector2(1.2, 1.2)
-skew = 0.0808579
+skew = 0.0575044
 
 [node name="Tree51" parent="Objects Layer/Trees" instance=ExtResource("16_mom80")]
-modulate = Color(0.797758, 0.705804, 1, 1)
+modulate = Color(0.709507, 0.886398, 1, 1)
 y_sort_enabled = false
 position = Vector2(-1550, 490)
 scale = Vector2(1.2, 1.2)
-skew = 0.0884989
-texture = ExtResource("11_vkhtc")
+skew = 0.0582446
+texture = ExtResource("24_q0l0v")
 
 [node name="Tree52" parent="Objects Layer/Trees" instance=ExtResource("16_mom80")]
-modulate = Color(0.929039, 0.755194, 1, 1)
+modulate = Color(0.984985, 0.848322, 1, 1)
 y_sort_enabled = false
 position = Vector2(-1495, 325)
 scale = Vector2(1.2, 1.2)
-skew = 0.087722
+skew = 0.0557784
+texture = ExtResource("11_vkhtc")
 
 [node name="Tree53" parent="Objects Layer/Trees" instance=ExtResource("16_mom80")]
-modulate = Color(0.74171, 0.896409, 1, 1)
+modulate = Color(0.847011, 0.885689, 1, 1)
 y_sort_enabled = false
 position = Vector2(-1592.5, 397.5)
 scale = Vector2(1.2, 1.2)
-skew = 0.0832751
+skew = 0.0611068
+texture = ExtResource("11_vkhtc")
 
 [node name="Tree54" parent="Objects Layer/Trees" instance=ExtResource("16_mom80")]
-modulate = Color(0.889064, 0.936394, 1, 1)
+modulate = Color(0.918842, 0.925201, 1, 1)
 y_sort_enabled = false
 position = Vector2(-1322.5, 727.5)
 scale = Vector2(1.2, 1.2)
-skew = 0.0937483
-texture = ExtResource("24_q0l0v")
+skew = 0.0683472
+texture = ExtResource("11_vkhtc")
 
 [node name="Tree55" parent="Objects Layer/Trees" instance=ExtResource("16_mom80")]
-modulate = Color(0.85692, 0.926232, 1, 1)
+modulate = Color(0.763091, 0.958568, 1, 1)
 y_sort_enabled = false
 position = Vector2(-687.5, 597.5)
 scale = Vector2(1.2, 1.2)
-skew = 0.0845416
+skew = 0.0598407
+texture = ExtResource("24_q0l0v")
 
 [node name="Tree56" parent="Objects Layer/Trees" instance=ExtResource("16_mom80")]
-modulate = Color(0.779038, 0.919216, 1, 1)
+modulate = Color(0.985458, 0.812393, 1, 1)
 y_sort_enabled = false
 position = Vector2(-1007.5, 745)
 scale = Vector2(1.2, 1.2)
-skew = 0.0916264
-texture = ExtResource("24_q0l0v")
+skew = 0.0526916
+texture = ExtResource("19_jbtuy")
 
 [node name="Tree57" parent="Objects Layer/Trees" instance=ExtResource("16_mom80")]
-modulate = Color(0.818887, 0.781616, 1, 1)
+modulate = Color(0.778874, 0.832225, 1, 1)
 y_sort_enabled = false
 position = Vector2(-1602.5, 560)
 scale = Vector2(1.2, 1.2)
-skew = 0.0650318
-texture = ExtResource("19_jbtuy")
+skew = 0.0247788
+texture = ExtResource("11_vkhtc")
 
 [node name="Tree58" parent="Objects Layer/Trees" instance=ExtResource("16_mom80")]
-modulate = Color(0.967323, 0.815895, 1, 1)
+modulate = Color(0.859295, 0.987491, 1, 1)
 y_sort_enabled = false
 position = Vector2(-1707.5, 505)
 scale = Vector2(1.2, 1.2)
-skew = 0.0953524
-texture = ExtResource("11_vkhtc")
+skew = 0.0644512
+texture = ExtResource("24_q0l0v")
 
 [node name="Tree59" parent="Objects Layer/Trees" instance=ExtResource("16_mom80")]
-modulate = Color(0.725328, 0.855936, 1, 1)
+modulate = Color(0.728119, 0.825419, 1, 1)
 y_sort_enabled = false
 position = Vector2(-1792.5, 460)
 scale = Vector2(1.2, 1.2)
-skew = 0.0886232
+skew = 0.0136498
 
 [node name="Tree60" parent="Objects Layer/Trees" instance=ExtResource("16_mom80")]
-modulate = Color(0.819535, 0.852225, 1, 1)
+modulate = Color(0.984434, 0.818288, 1, 1)
 y_sort_enabled = false
 position = Vector2(-1707.5, 430)
 scale = Vector2(1.2, 1.2)
-skew = 0.088489
-texture = ExtResource("19_jbtuy")
+skew = 0.0582347
+texture = ExtResource("24_q0l0v")
 
 [node name="Tree10" parent="Objects Layer/Trees" instance=ExtResource("16_mom80")]
-modulate = Color(0.961485, 0.858224, 1, 1)
+modulate = Color(0.942519, 0.839063, 1, 1)
 y_sort_enabled = false
 position = Vector2(1267.5, 247.5)
 scale = Vector2(1.2, 1.2)
-skew = 0.0851855
-texture = ExtResource("11_vkhtc")
+skew = 0.0909747
+texture = ExtResource("19_jbtuy")
 
 [node name="Tree11" parent="Objects Layer/Trees" instance=ExtResource("16_mom80")]
 visible = false
-modulate = Color(0.80104, 0.733401, 1, 1)
+modulate = Color(0.863375, 0.761047, 1, 1)
 y_sort_enabled = false
 position = Vector2(1315, 12.5)
 scale = Vector2(1.2, 1.2)
-skew = 0.0826254
-texture = ExtResource("19_jbtuy")
+skew = 0.0780218
+texture = ExtResource("24_q0l0v")
 
 [node name="Buildings" type="Node2D" parent="Objects Layer"]
 y_sort_enabled = true
@@ -965,19 +962,19 @@ texture = ExtResource("25_r8h0w")
 script = ExtResource("38_trpbn")
 
 [node name="GameTree" type="Sprite2D" parent="Objects Layer/Buildings/Building13"]
-modulate = Color(0.896436, 0.98786, 1, 1)
+modulate = Color(0.927329, 0.944017, 1, 1)
 position = Vector2(-292.5, -30)
-skew = 0.0651103
+skew = 0.0982631
 texture = ExtResource("11_vkhtc")
 script = ExtResource("40_16fx2")
 initial_skew = 0.0786427
 trees_images_list = Array[Texture]([ExtResource("19_jbtuy"), ExtResource("11_vkhtc"), ExtResource("12_ceo77"), ExtResource("24_q0l0v")])
 
 [node name="GameTree2" type="Sprite2D" parent="Objects Layer/Buildings/Building13"]
-modulate = Color(0.882916, 0.7479, 1, 1)
+modulate = Color(0.707203, 0.986012, 1, 1)
 position = Vector2(-35, 45)
-skew = 0.0831776
-texture = ExtResource("19_jbtuy")
+skew = 0.0294458
+texture = ExtResource("24_q0l0v")
 script = ExtResource("40_16fx2")
 initial_skew = 0.0786427
 trees_images_list = Array[Texture]([ExtResource("19_jbtuy"), ExtResource("11_vkhtc"), ExtResource("12_ceo77"), ExtResource("24_q0l0v")])
@@ -989,19 +986,19 @@ texture = ExtResource("25_r8h0w")
 script = ExtResource("38_trpbn")
 
 [node name="GameTree" type="Sprite2D" parent="Objects Layer/Buildings/Building17"]
-modulate = Color(0.872266, 0.883724, 1, 1)
+modulate = Color(0.956948, 0.722566, 1, 1)
 position = Vector2(-292.5, -30)
-skew = 0.0651103
-texture = ExtResource("12_ceo77")
+skew = 0.0982631
+texture = ExtResource("11_vkhtc")
 script = ExtResource("40_16fx2")
 initial_skew = 0.0786427
 trees_images_list = Array[Texture]([ExtResource("19_jbtuy"), ExtResource("11_vkhtc"), ExtResource("12_ceo77"), ExtResource("24_q0l0v")])
 
 [node name="GameTree2" type="Sprite2D" parent="Objects Layer/Buildings/Building17"]
-modulate = Color(0.970171, 0.70775, 1, 1)
+modulate = Color(0.872543, 0.986395, 1, 1)
 position = Vector2(-35, 45)
-skew = 0.0831776
-texture = ExtResource("24_q0l0v")
+skew = 0.0294458
+texture = ExtResource("19_jbtuy")
 script = ExtResource("40_16fx2")
 initial_skew = 0.0786427
 trees_images_list = Array[Texture]([ExtResource("19_jbtuy"), ExtResource("11_vkhtc"), ExtResource("12_ceo77"), ExtResource("24_q0l0v")])
@@ -1036,16 +1033,17 @@ texture = ExtResource("29_vl56s")
 offset = Vector2(0, -110.175)
 
 [node name="Tree22" parent="Objects Layer/Buildings/Building7" instance=ExtResource("16_mom80")]
-modulate = Color(0.816649, 0.921123, 1, 1)
+modulate = Color(0.783469, 0.850762, 1, 1)
 position = Vector2(-320.249, -92.5163)
 scale = Vector2(2.10614, 2.10614)
-skew = 0.0835792
+skew = 0.0805632
+texture = ExtResource("11_vkhtc")
 
 [node name="Tree23" parent="Objects Layer/Buildings/Building7" instance=ExtResource("16_mom80")]
-modulate = Color(0.706484, 0.734371, 1, 1)
+modulate = Color(0.982229, 0.797881, 1, 1)
 position = Vector2(-160.124, -192.149)
 scale = Vector2(2.10614, 2.10614)
-skew = 0.097258
+skew = 0.0139047
 texture = ExtResource("24_q0l0v")
 
 [node name="Building16" parent="Objects Layer/Buildings" instance=ExtResource("11_xegis")]
@@ -1056,18 +1054,18 @@ texture = ExtResource("29_vl56s")
 offset = Vector2(0, -110.175)
 
 [node name="Tree22" parent="Objects Layer/Buildings/Building16" instance=ExtResource("16_mom80")]
-modulate = Color(0.923123, 0.782206, 1, 1)
+modulate = Color(0.877588, 0.97455, 1, 1)
 position = Vector2(-320.249, -92.5163)
 scale = Vector2(2.10614, 2.10614)
-skew = 0.0835792
-texture = ExtResource("11_vkhtc")
+skew = 0.0805632
+texture = ExtResource("19_jbtuy")
 
 [node name="Tree23" parent="Objects Layer/Buildings/Building16" instance=ExtResource("16_mom80")]
-modulate = Color(0.808968, 0.964321, 1, 1)
+modulate = Color(0.885271, 0.955246, 1, 1)
 position = Vector2(-160.124, -192.149)
 scale = Vector2(2.10614, 2.10614)
-skew = 0.082839
-texture = ExtResource("24_q0l0v")
+skew = 0.0901407
+texture = ExtResource("11_vkhtc")
 
 [node name="Factory" parent="Objects Layer/Buildings" instance=ExtResource("11_xegis")]
 y_sort_enabled = true
@@ -1192,29 +1190,29 @@ texture = ExtResource("39_7oyal")
 script = ExtResource("38_trpbn")
 
 [node name="GameTree" type="Sprite2D" parent="Objects Layer/Buildings/Building9"]
-modulate = Color(0.716216, 0.867374, 1, 1)
+modulate = Color(0.786358, 0.876899, 1, 1)
 position = Vector2(-258.984, 10.0284)
-skew = 0.0936741
-texture = ExtResource("19_jbtuy")
+skew = 0.091495
+texture = ExtResource("24_q0l0v")
 offset = Vector2(0, -100)
 script = ExtResource("40_16fx2")
 initial_skew = 0.0786427
 trees_images_list = Array[Texture]([ExtResource("19_jbtuy"), ExtResource("11_vkhtc"), ExtResource("12_ceo77"), ExtResource("24_q0l0v")])
 
 [node name="GameTree2" type="Sprite2D" parent="Objects Layer/Buildings/Building9"]
-modulate = Color(0.712277, 0.812723, 1, 1)
+modulate = Color(0.82831, 0.986317, 1, 1)
 position = Vector2(-166.484, 65.0284)
-skew = 0.0829431
-texture = ExtResource("19_jbtuy")
+skew = 0.0585555
+texture = ExtResource("24_q0l0v")
 offset = Vector2(0, -100)
 script = ExtResource("40_16fx2")
 initial_skew = 0.0786427
 trees_images_list = Array[Texture]([ExtResource("19_jbtuy"), ExtResource("11_vkhtc"), ExtResource("12_ceo77"), ExtResource("24_q0l0v")])
 
 [node name="GameTree3" type="Sprite2D" parent="Objects Layer/Buildings/Building9"]
-modulate = Color(0.991224, 0.709134, 1, 1)
+modulate = Color(0.94993, 0.989306, 1, 1)
 position = Vector2(-90, 110)
-skew = 0.0878775
+skew = 0.0753203
 texture = ExtResource("12_ceo77")
 offset = Vector2(0, -100)
 script = ExtResource("40_16fx2")
@@ -1222,10 +1220,10 @@ initial_skew = 0.0786427
 trees_images_list = Array[Texture]([ExtResource("19_jbtuy"), ExtResource("11_vkhtc"), ExtResource("12_ceo77"), ExtResource("24_q0l0v")])
 
 [node name="GameTree4" type="Sprite2D" parent="Objects Layer/Buildings/Building9"]
-modulate = Color(0.989606, 0.778087, 1, 1)
+modulate = Color(0.738737, 0.95031, 1, 1)
 position = Vector2(10, 145)
-skew = 0.0825696
-texture = ExtResource("12_ceo77")
+skew = 0.0989766
+texture = ExtResource("19_jbtuy")
 offset = Vector2(0, -100)
 script = ExtResource("40_16fx2")
 initial_skew = 0.0786427

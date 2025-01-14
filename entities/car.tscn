@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://d3msiyam2g4xt"]
+[gd_scene load_steps=15 format=3 uid="uid://d3msiyam2g4xt"]
 
 [ext_resource type="Script" path="res://scripts/car.gd" id="1_qn62m"]
 [ext_resource type="Texture2D" uid="uid://bnb3y2fcwsg6q" path="res://assets/cars/Car1/black/car.png0001.png" id="2_htnt3"]
@@ -11,13 +11,16 @@
 [ext_resource type="Texture2D" uid="uid://dekquvoyk0arg" path="res://assets/cars/Car1/black/car.png0008.png" id="9_4u1ha"]
 [ext_resource type="Script" path="res://scripts/car_view_polygon.gd" id="10_j0ah7"]
 
+[sub_resource type="LabelSettings" id="LabelSettings_gn65s"]
+font_size = 26
+
 [sub_resource type="GDScript" id="GDScript_prmmk"]
 script/source = "extends Area2D
 
 
 # Get the car this view area belongs to.
 func get_car() -> Car:
-	return $Car
+	return $\"../..\"
 "
 
 [sub_resource type="GDScript" id="GDScript_djvpp"]
@@ -32,10 +35,11 @@ func get_car() -> Car:
 radius = 7.00003
 
 [node name="Car" type="Node2D"]
+y_sort_enabled = true
 position = Vector2(18.9239, -71.4948)
 script = ExtResource("1_qn62m")
 car_8_directions_images = Array[Texture]([ExtResource("2_htnt3"), ExtResource("3_4j4ll"), ExtResource("4_qdfhu"), ExtResource("5_eqcp7"), ExtResource("6_hehk8"), ExtResource("7_8fcwd"), ExtResource("8_kuein"), ExtResource("9_4u1ha"), ExtResource("2_htnt3"), ExtResource("3_4j4ll"), ExtResource("4_qdfhu"), ExtResource("5_eqcp7"), ExtResource("6_hehk8"), ExtResource("7_8fcwd"), ExtResource("8_kuein"), ExtResource("9_4u1ha")])
-metadata/test_scene = "res://scenes/cars_test_scene.tscn"
+metadata/test_scene = "res://scenes/testing/road_crossing_test.tscn"
 
 [node name="RecentlySpawnedFlagClearer" type="Timer" parent="."]
 wait_time = 0.522
@@ -47,14 +51,22 @@ position = Vector2(18, 14)
 scale = Vector2(0.539063, 0.539063)
 texture = ExtResource("2_htnt3")
 
-[node name="CarViewArea2D" type="Area2D" parent="CarSprite" groups=["TrafficLightsGroup", "cars"]]
+[node name="Label" type="Label" parent="CarSprite"]
+offset_left = 0.141169
+offset_top = -64.0096
+offset_right = 40.1412
+offset_bottom = -25.0096
+text = "???"
+label_settings = SubResource("LabelSettings_gn65s")
+
+[node name="CarViewArea2D" type="Area2D" parent="CarSprite" groups=["Cars", "TrafficLightsGroup"]]
 script = SubResource("GDScript_prmmk")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="CarSprite/CarViewArea2D"]
 script = ExtResource("10_j0ah7")
 view_distance = 1.5
 
-[node name="CarCollisionArea2D" type="Area2D" parent="CarSprite" groups=["TrafficLightsGroup", "cars"]]
+[node name="CarCollisionArea2D" type="Area2D" parent="CarSprite" groups=["Cars", "TrafficLightsGroup"]]
 position = Vector2(-33.3913, -25.971)
 scale = Vector2(1.85507, 1.85507)
 script = SubResource("GDScript_djvpp")

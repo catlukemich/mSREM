@@ -29,22 +29,22 @@
 
 [node name="CarSpawner" type="Node2D"]
 script = ExtResource("1_op7ay")
-metadata/test_scene = "res://scenes/cars_test_scene.tscn"
+metadata/test_scene = "res://scenes/testing/road_crossing_test.tscn"
 
 [node name="CarBlack" parent="." instance=ExtResource("2_y2m57")]
+visible = false
 position = Vector2(222.813, 233.729)
 car_8_directions_images = Array[Texture]([ExtResource("3_3oeoq"), ExtResource("4_hgiee"), ExtResource("5_csjsv"), ExtResource("6_lbwgk"), ExtResource("7_ptix5"), ExtResource("8_jjm1o"), ExtResource("9_lhej7"), ExtResource("10_v4kuw")])
-car_speed = 224.782
 
 [node name="CarBlue" parent="." instance=ExtResource("2_y2m57")]
+visible = false
 position = Vector2(62.5664, 551.64)
 car_8_directions_images = Array[Texture]([ExtResource("11_qlerg"), ExtResource("12_ixgbx"), ExtResource("13_y2u8f"), ExtResource("14_c0hew"), ExtResource("15_dtlfw"), ExtResource("16_dbsn3"), ExtResource("17_m1pyh"), ExtResource("18_xmn6y")])
-car_speed = 237.32
 
 [node name="CarBrown" parent="." instance=ExtResource("2_y2m57")]
+visible = false
 position = Vector2(-145.31, 284.52)
 car_8_directions_images = Array[Texture]([ExtResource("19_p3pd4"), ExtResource("20_yepik"), ExtResource("21_3o6ik"), ExtResource("22_ke48l"), ExtResource("23_nuvcd"), ExtResource("24_t64ad"), ExtResource("25_1msfg"), ExtResource("26_r8krm")])
-car_speed = 248.077
 
 [node name="CountDownTimer" type="Timer" parent="."]
 wait_time = 0.089

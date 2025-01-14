@@ -28,9 +28,11 @@ texture_region_size = Vector2i(256, 128)
 0:7/0 = 0
 0:7/0/y_sort_origin = 58
 0:7/0/custom_data_0 = true
-2:7/0 = 0
-2:7/0/y_sort_origin = -58
-2:7/0/custom_data_0 = true
+2:6/size_in_atlas = Vector2i(1, 2)
+2:6/0 = 0
+2:6/0/texture_origin = Vector2i(0, 64)
+2:6/0/y_sort_origin = -58
+2:6/0/custom_data_0 = true
 
 [resource]
 tile_shape = 1

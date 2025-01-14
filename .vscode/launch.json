@@ -5,12 +5,24 @@
     "version": "0.2.0",
     "configurations": [
         
+        // {
+        //     "name": "GDScript: Launch Project",
+        //     "type": "godot",
+        //     "request": "launch",
+        //     "project": "${workspaceFolder}",
+        //     "scene": "scenes/testing/cars_test_scene.tscn",
+        //     "debug_collisions": false,
+        //     "debug_paths": false,
+        //     "debug_navigation": false,
+        //     "additional_options": ""
+        // },
+         
         {
             "name": "GDScript: Launch Project",
             "type": "godot",
             "request": "launch",
             "project": "${workspaceFolder}",
-            "scene": "scenes/cars_test_scene.tscn",
+            "scene": "scenes/testing/road_crossing_test.tscn",
             "debug_collisions": false,
             "debug_paths": false,
             "debug_navigation": false,

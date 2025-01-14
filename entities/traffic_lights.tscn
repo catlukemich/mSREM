@@ -22,22 +22,21 @@ metadata/test_scene = "res://scenes/cars_test_scene.tscn"
 
 [node name="Back" type="Sprite2D" parent="."]
 texture = ExtResource("1_n56hn")
-offset = Vector2(0, -64)
 
 [node name="Front1" type="Sprite2D" parent="."]
 position = Vector2(0, 64)
 texture = ExtResource("2_3vf4t")
-offset = Vector2(0, -128)
+offset = Vector2(0, -64)
 
 [node name="Front2" type="Sprite2D" parent="."]
 position = Vector2(-1, 65)
 texture = ExtResource("3_s8n1c")
-offset = Vector2(0, -128)
+offset = Vector2(0, -64)
 
 [node name="FrontYellow" type="Sprite2D" parent="."]
 position = Vector2(-1, 65)
 texture = ExtResource("5_5gles")
-offset = Vector2(0, -128)
+offset = Vector2(0, -64)
 
 [node name="Timer" type="Timer" parent="."]
 one_shot = true

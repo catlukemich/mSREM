@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=4 uid="uid://capx8sl1x7jhi"]
+
+[ext_resource type="PackedScene" uid="uid://d184flwy4xp5w" path="res://scenes/testing/cars_test_scene.tscn" id="1_o3snn"]
+[ext_resource type="PackedScene" uid="uid://ckmrjbqi1vj5r" path="res://entities/road_crossing.tscn" id="2_gsmhg"]
+
+[node name="Node2D" instance=ExtResource("1_o3snn")]
+
+[node name="Roads" parent="." index="1"]
+tile_map_data = PackedByteArray("AAABAP7/AQAAAAAAAAABAP//AQAAAAAAAAACAAAAAQAAAAAAAAACAAEAAQAAAAAAAAADAAIAAQADAAAAAAACAAMAAQAAAAEAAAACAAQAAQAAAAEAAAABAAUAAQAAAAEAAAABAAYAAQAAAAEAAAADAAMAAQAAAAAAAAAEAAQAAQAAAAAAAAAEAAUAAQAAAAAAAAAFAAYAAQAAAAAAAAA=")
+
+[node name="TrafficLights" parent="Roads" index="0"]
+position = Vector2(803, 1384)
+
+[node name="CityLimits" parent="." index="2"]
+tile_map_data = PackedByteArray("AAABAAYAAAAAAAcAAAAFAAYAAAACAAYAAAABAP7/AAAAAAEAAAA=")
+
+[node name="CarSpawner" parent="." index="3"]
+spawn_interval_in_seconds = 0.8
+
+[node name="RoadCrossing" parent="." index="4" instance=ExtResource("2_gsmhg")]
+position = Vector2(892, 195)
